@@ -1,0 +1,177 @@
+;; MELPA
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  )
+
+;; Package-Summary 
+(defvar lester-packages
+  '(alert
+
+    ac-helm
+    
+    async 
+
+    auto-complete
+
+    calfw
+
+    calfw-gcal
+
+    cider
+    
+    clojure-mode 
+
+    clojure-mode-extra-font-locking
+    
+    company
+    
+    company-irony
+
+    csharp-mode
+
+    dash
+
+    deferred
+
+    eclim
+    
+    epl
+
+    flycheck
+    
+    flymake-cursor
+    
+    flymake-jslint
+
+    fsharp-mode
+    
+    gntp
+
+    google-maps
+    
+    grandshell-theme
+
+    helm
+
+    helm-core
+
+    helm-dash
+    
+    helm-spotify
+    
+    irony
+
+    java-snippets
+
+    js2-mode
+
+    log4e
+    
+    omnisharp
+
+    org
+
+    org-gcal
+
+    pkg-info
+
+    popup
+
+    powerline
+    
+    rainbow-delimiters
+
+    rainbow-mode
+    
+    request
+
+    request-deferred
+
+    s
+
+    seq
+
+    smart-mode-line
+    
+    smex
+
+    sublime-themes
+    
+    undo-tree
+
+    yasnippet
+
+    ycm) "Default packages")
+
+;; Installs Packages
+(require 'cl)
+(defun install-lester-pkg ()
+  (package-initialize)
+  (cl-loop for pkg in lester-packages
+	when (not (package-installed-p pkg)) do
+	(return nil)
+	finally (return
+		 t)))
+
+;; Checks if Packages are installed
+(unless (install-lester-pkg) 
+  (message "%s" "Refreshing package database...") 
+  (package-refresh-contents)
+  (dolist (pkg lester-packages)
+    (when (not (package-installed-p pkg))
+          (package-install pkg))))
+
+;; Require's
+
+;; ECLIM
+(require 'eclim)
+(global-eclim-mode)
+
+(require 'eclimd)
+
+;; Fly-Check
+(global-flycheck-mode)
+
+;; Auto-Complete
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+
+;; Auto-Complete Helm
+;; (require 'ac-helm)  ;; Not necessary if using ELPA package
+;; (global-set-key (kbd "C-:") 'ac-complete-with-helm)
+;; (define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
+
+;; Company Mode
+(add-hook 'after-init-hook 'global-company-mode)
+(require 'company-emacs-eclim)
+(company-emacs-eclim-setup)
+(global-company-mode t)
+
+;;; Yasnippets
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+(add-to-list 'yas-snippet-dirs "/Users/LesterRamos/.emacs.d/snippets")
+
+;; Helm
+(require 'helm)
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-mini)
+
+;; all the icons
+(require 'all-the-icons)
+
+(setq sml/theme 'respectful)
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+
+
+(provide '.packages)
+;;; .packages.el ends here 
