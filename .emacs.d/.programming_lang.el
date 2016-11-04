@@ -68,6 +68,19 @@
     (cider-interactive-eval (format "(def server (%s/start)) (println server)" ns))))
 
 
+(defun cider-figwheel-repl ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (goto-char (point-max))
+    (insert "(require 'figwheel-sidecar.repl-api)
+             (figwheel-sidecar.repl-api/start-figwheel!) ; idempotent
+             (figwheel-sidecar.repl-api/cljs-repl)")
+    (cider-repl-return)))
+
+(global-set-key (kbd "C-c C-f") #'cider-figwheel-repl)
+
+
 (defun cider-refresh ()
   (interactive)
   (cider-interactive-eval (format "(user/reset)")))
@@ -82,6 +95,9 @@
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+
+
+(require 'cider)
 
 ;;------------------------------------------------------------------------
 ;; Java Mode Eclim
@@ -137,3 +153,9 @@
 
 	((string-equal (file-name-extension buffer-file-name) "asm" )
 	(shell-command (concat "lc3as " buffer-file-name)))))
+
+;;---------------------------------------------------------
+
+;; Javascript Lint
+(require 'flymake-jshint)
+(add-hook 'js-mode-hook 'flymake-jshint-load)

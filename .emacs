@@ -11,9 +11,7 @@
 
 
 ;; Line-Numbers
-(global-linum-mode 1)
-(custom-set-variables '(linum-format 'dynamic))
-
+;;(global-linum-mode 1)
 
 ;; No Tool-Bar (GUI)
 (tool-bar-mode -1)
@@ -23,7 +21,7 @@
 
 ;; Color-Theme
 (if window-system
-    (load-theme 'brin t)
+    (load-theme 'material t)
   (load-theme 'wombat t))
 
 ;; Smooth scrolling
@@ -55,8 +53,8 @@
 
 ;; No Splash-Screen
 (setq inhibit-splash-screen t
-      initial-scratch-message nil
-      initial-major-mode 'text-mode)
+     initial-scratch-message nil
+     initial-major-mode 'text-mode)
 
 
 ;; PATH ENV Variable
@@ -122,3 +120,22 @@
 (load-file "~/.emacs.d/.org.el")
 
 ;;; END
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(eclim-eclipse-dirs
+   (quote
+    ("~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/")))
+ '(eclim-executable "~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/eclim")
+ '(linum-format " %7i ")
+ '(package-selected-packages
+   (quote
+    (flymake-jshint js-comint material-theme zenburn-theme ycm xterm-color w3m twilight-bright-theme twilight-anti-bright-theme sublime-themes spacemacs-theme solarized-theme smex rainbow-mode rainbow-delimiters projectile org-gcal omnisharp magit leuven-theme js2-mode java-snippets helm-spotify helm-dash grandshell-theme gradle-mode gotham-theme fsharp-mode flymake-cursor f exec-path-from-shell epc emacsql-psql doom-themes creamsody-theme company-irony company-emacs-eclim color-theme-sanityinc-tomorrow clojure-mode-extra-font-locking cider calfw-gcal calfw ac-helm abyss-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

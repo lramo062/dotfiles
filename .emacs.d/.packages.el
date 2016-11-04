@@ -44,13 +44,15 @@
     
     flymake-cursor
     
-    flymake-jslint
+    flymake-jshint
 
     fsharp-mode
     
     gntp
 
     google-maps
+
+    gradle-mode
     
     grandshell-theme
 
@@ -66,9 +68,15 @@
 
     java-snippets
 
+    js-comint
+    
     js2-mode
 
     log4e
+
+    magit
+
+    material-theme
     
     omnisharp
 
@@ -93,8 +101,6 @@
     s
 
     seq
-
-    smart-mode-line
     
     smex
 
@@ -136,8 +142,8 @@
 (global-flycheck-mode)
 
 ;; Auto-Complete
-;; (require 'auto-complete-config)
-;; (ac-config-default)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;; Auto-Complete Helm
 ;; (require 'ac-helm)  ;; Not necessary if using ELPA package

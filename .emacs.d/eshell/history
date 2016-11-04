@@ -1,121 +1,3 @@
-cd ..
-ls
-ls -a
-rm .emacs\~
-ls
-ls -a
-cd Desktop/
-ls
-ls -a
-rm #Assignment3.fsx
-rm .#Assignment3.fsx
-ls
-ls
-ls -a
-clear
-
-ls
-clear
-
-cd /usr/local/bin/
-ls
-node 
-node 
-node
-cd /usr/local/bin/
-ls 
-node
-./node
-python test.py 
-python3 test.py 
-python3 test.py 
-..
-emacs .zshrc
-ls
-ls -a
-rm .core-modeline.el 
-clear
-
-ls
-cd .emacs.d/
-ls
-rm .core-modeline.el 
-clear
-
-cd Desktop/
-mv Exam1.fsx ~/FIU/PLang/
-ls
-clear
-
-cd Desktop/
-lein new ProgrammingLang
-lein new ProgrammingLang
-git
-clear
-
-lein
-lein 
-lein 
-antiword
-antiword 
-cler
-clear
-
-antiword ~/Downloads/\~\$ass1.doc
-antiword ~/Downloads/ass1.doc
-ionic serve
-ionic serve
-cd ../pos2whse/
-npm install oracledb
-clear
-
-cd ..
-cd ..
-cd ..
-ls
-rm -r oracle
-rm -r oracle_db
-ls
-clearls
-cd oradiag_LesterRamos/
-ls
-cd diag/
-ls
-cd clients/
-ls
-cd user_LesterRamos/
-ls
-cd host_3970766200_82/
-ls
-cd ..
-cd ..
-cd ..
-cd ..
-cd..
-cd ..
-rm -r oradiag_LesterRamos/
-ls
-rm -r node-red-firebase/
-clear
-
-ls
-rm -r NetBeansProjects/
-rm -r VirtualBox\ VMs/
-clearls
-ls
-clear
-
-mv /Users/LesterRamos/Desktop/instantclient_12_1 ~/
-ls
-cd instantclient_12_1/
-ls
-ln -s libclntsh.dylib.11.1 libclntsh.dylib
-ln -s libocci.dylib.11.1 libocci.dylib
-cd ..
-mkdir lib
-ls
-ln -s ~/instantclient_11_2/{libclntsh.dylib.11.1,libnnz11.dylib,libociei.dylib} ~/lib/
-ls
 ln -s ~/instantclient_11_2/{libsqlplus.dylib,libsqlplusic.dylib} ~/lib/export PATH=~/instantclient_11_2:$PATH
 cd Desktop/Work/
 ls
@@ -126,3 +8,121 @@ sudo npm cache clean -f
 sudo npm install -g n 
 sudo npm install -g n npm ERR!     /Users/LesterRamos/Desktop/Work/pos2whse/npm-debug.log
 sudo npm install -g n
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+node app.js
+ls
+ls -a
+cd .got
+cd .git
+ls
+rm CHERRY_PICK_HEAD 
+cd ..
+clear
+
+ls
+tree
+cd Desktop/
+ls
+cd Assignment4/
+ls
+clear
+
+tree 
+clear
+
+ls
+(print "hello")
+(print "bye-bye")
+(+ 1 2 3)
+ls
+clear
+
+sftp lramo62@ocelot.aul.fiu.edu
+sftp lramo062@ocelot.aul.fiu.edu
