@@ -23,8 +23,8 @@
 
 ;; Color-Theme
 (if window-system
-    (load-theme 'monokai t)
-  (load-theme 'monokai t))
+    (load-theme 'spolsky t)
+  (load-theme 'wombat t))
 
 ;; Smooth scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -77,7 +77,7 @@
   (interactive "nTransparency Value 0 - 100 opaque:")
      (set-frame-parameter (selected-frame) 'alpha value))
 ;; Set Transparency at Start-up
-(transparency 100)
+(transparency 85)
 
 
 ;; Previous-Terminal-Commmands
