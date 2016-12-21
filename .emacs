@@ -23,7 +23,7 @@
 
 ;; Color-Theme
 (if window-system
-    (load-theme 'spolsky t)
+    (load-theme 'doom-one t)
   (load-theme 'wombat t))
 
 ;; Smooth scrolling
