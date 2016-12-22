@@ -11,6 +11,11 @@
   (find-file "~/.emacs"))
 
 
+;; set init files to the dotfiles folder
+;; (setq user-init-file "~/dotfiles/.emacs")
+;; (setq user-emacs-directory "~/dotfiles/.emacs.d")
+;; (load user-init-file)
+
 ;; Line-Numbers
 ;;(global-linum-mode 1)
 
@@ -20,6 +25,9 @@
 
 ;; No scroll bar
 (scroll-bar-mode -1)
+
+;; rainbow-delimiters
+(rainbow-delimiters-mode)
 
 ;; Color-Theme
 (if window-system

@@ -191,3 +191,12 @@ bindsym $mod+Shift+g gaps inner current set 0
 # Compton
 exec /usr/bin/compton --config /home/lester/.config/compton/compton.conf -b
 
+# i3-lock
+bindsym $mod+p exec "~/.config/i3/lockScript.sh"
+
+# log out after 15 minuets of no activity
+exec xautolock -time 15 -locker '~/.config/i3/lockScript.sh' &
+
+
+
+
