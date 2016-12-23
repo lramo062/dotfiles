@@ -34,8 +34,11 @@ font pango: Roboto Mono 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# start a emacs buffer
+bindsym $mod+Return exec emacs
+
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+t exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
