@@ -221,6 +221,9 @@ exec /usr/bin/compton --config /home/lester/.config/compton/compton.conf -b
 # i3-lock
 bindsym $mod+p exec "~/.config/i3/lockScript.sh"
 
+# i3-lock and suspend
+bindsym $mod+Shift+p exec "~/.config/i3/./lockScript.sh & systemctl suspend"
+
 # log out after 15 minuets of no activity
 exec xautolock -time 15 -locker '~/.config/i3/lockScript.sh' &
 
