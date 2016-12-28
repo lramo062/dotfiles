@@ -189,6 +189,9 @@ bar {
 exec --no-startup-id feh --bg-scale '/home/lester/Pictures/Wallpapers/138 - 8fpsD0W.png' 
 
 
+# Bitlbee for Facebook Weechat Messaging
+exec --no-startup-id bitlbee -F -u lramo062
+
 # Window Apperance
 
 # misc rules
@@ -225,6 +228,6 @@ bindsym $mod+p exec "~/.config/i3/lockScript.sh"
 bindsym $mod+Shift+p exec "~/.config/i3/./lockScript.sh & systemctl suspend"
 
 # log out after 15 minuets of no activity
-exec xautolock -time 15 -locker '~/.config/i3/lockScript.sh' &
+#exec xautolock -time 15 -locker '~/.config/i3/lockScript.sh' &
 
 

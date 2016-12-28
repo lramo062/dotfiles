@@ -105,8 +105,8 @@
 (add-hook 'java-mode-hook 'eclim-mode)
 
 (custom-set-variables
- '(eclim-eclipse-dirs '("~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/"))
-   '(eclim-executable "~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/eclim"))
+ '(eclim-eclipse-dirs '("/usr/bin/eclipse"))
+   '(eclim-executable "/home/lester/.eclipse/org.eclipse.platform_4.6.2_155965261_linux_gtk_x86_64/eclim"))
 
 
 (require 'gradle-mode)
