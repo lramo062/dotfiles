@@ -231,3 +231,9 @@ bindsym $mod+Shift+p exec "~/.config/i3/./lockScript.sh & systemctl suspend"
 #exec xautolock -time 15 -locker '~/.config/i3/lockScript.sh' &
 
 
+# Have my UltraWide be Workspace 1
+workspace 1 output DP-4
+workspace 2 output HDMI-0
+
+# dunst notification daemon
+exec --no-startup-id dunst -config /usr/share/dunst/dunstrc

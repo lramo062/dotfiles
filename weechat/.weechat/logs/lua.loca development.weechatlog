@@ -1,0 +1,376 @@
+2016-12-23 22:46:55	 lramo062	I feel you dawg
+2016-12-23 22:47:40	 lramo062	What did you name this? I got matrix working on weechat
+2016-12-23 22:50:15	 lramo062	yeooooooo
+2016-12-23 22:50:31	 lramo062	what it fucking dooo nigga im on weechat
+2016-12-23 23:29:54	 lramo062	2
+2016-12-23 23:29:55	 lramo062	1
+2016-12-24 11:35:08	 omart725	It's a bit laggy
+2016-12-24 11:35:18	~Christian0411	Lester, my boy Bryan showed me this. 
+2016-12-24 11:35:34	 omart725	But I like it. It feels very hacky, like it's meant for programmers lol
+2016-12-24 11:35:47	~Christian0411	Yeah it's open source 
+2016-12-24 11:35:54	~Christian0411	Decentralized too
+2016-12-24 11:36:17	 omart725	What does decentralized mean?
+2016-12-24 11:36:45	~Christian0411	No one central server. 
+2016-12-24 11:38:22	 omart725	Ohhh ok
+2016-12-24 11:39:09	 lramo062	Peer2peer? Lol
+2016-12-24 11:39:25	~Christian0411	Not necessarily peer 2 peer. 
+2016-12-24 11:53:02	 lramo062	aight
+2016-12-24 11:53:14	 lramo062	I'm gonna do the shit for the packages now
+2016-12-24 11:53:55	 omart725	What thing for packages?
+2016-12-24 11:54:37	--	@Christian0411:matrix.org is now known as Christian0411
+2016-12-24 11:55:10	~Christian0411	Y'all should really change your display names. 
+2016-12-24 11:56:26	--	@omart725:matrix.org is now known as omart725
+2016-12-24 11:57:09	 omart725	Why didn't you just put your name?
+2016-12-24 11:58:17	 lramo062	idk how to change it from weechat
+2016-12-24 11:59:36	~Christian0411	True lol
+2016-12-24 11:59:54	~Christian0411	There ya go
+2016-12-24 12:00:05	~Christian0411	Idk why my messages are sending twice. 
+2016-12-24 12:00:19	 lramo062	I'm only getting them once
+2016-12-24 12:00:34	~Christian0411	They come up twice on my device lol. Whatever. 
+2016-12-24 12:02:57	 omart725	It's your buggy jailbreak
+2016-12-24 12:03:17	~Christian0411	I'm not jail broken right now 
+2016-12-24 12:05:55	 omart725	So riot has a web client that works without your phone being on?
+2016-12-24 12:06:04	~Christian0411	Yes
+2016-12-24 12:06:16	~Christian0411	And also a console line with weechat
+2016-12-24 12:06:20	~Christian0411	Imma use that. 
+2016-12-24 12:07:35	~Christian0411	I'm gonna leave a review on the App Store. Gotta support OSS
+2016-12-24 12:08:05	 lramo062	yeah im on weechat right now
+2016-12-24 12:08:23	 lramo062	dude these people are tripping lol 
+2016-12-24 12:08:54	 lramo062	you can create a product just fine like wtf, the only thing is that It wont appear on the user index page because there's a limit of 4
+2016-12-24 12:09:12	 lramo062	beacuse that's what he told me would be the most ever in the user facing screens
+2016-12-24 12:09:53	 lramo062	the only thing that is buggy is the log in bro i need to fix that because for sure he's gonna write that
+2016-12-24 12:09:59	 omart725	Didn't want create me packaged disabled if there are already 4?
+2016-12-24 12:10:18	 lramo062	for some reason some times i can't log in becuase it says user name does not exist
+2016-12-24 12:10:18	 omart725	Sorry that was written so bad lol
+2016-12-24 12:10:31	 lramo062	and oscar idk what you meant in that message
+2016-12-24 12:10:45	 omart725	Didn't he say he wanted create new package disabled if there are already 4?
+2016-12-24 12:11:18	 lramo062	still dont know what you mean
+2016-12-24 12:12:38	 omart725	Christian: he said to disable create new package button if there are already 4
+2016-12-24 12:12:49	 omart725	Didn't mean to tag Chris lol
+2016-12-24 12:14:11	~Christian0411	Oh shit I gotta get slack 
+2016-12-24 12:14:41	 lramo062	oh nah I never knew he said that, where did he say that?
+2016-12-24 12:15:17	 omart725	In the slack. It's the latest trello update he posted 
+2016-12-24 12:15:55	 omart725	Yo to install weechat you used homebrew?
+2016-12-24 12:16:01	 lramo062	no but i mean i think he meant it as an issue 
+2016-12-24 12:16:09	 lramo062	like he can't create it 
+2016-12-24 12:16:37	 lramo062	but you can, it just doesn't display the on the user-index screen 
+2016-12-24 12:16:37	~Christian0411	Very important brew install weechat --with-lua 
+2016-12-24 12:16:46	 lramo062	and do --with python
+2016-12-24 12:17:02	 lramo062	oscar i fixed the module issue
+2016-12-24 12:17:05	 lramo062	guess what it was 
+2016-12-24 12:17:39	 lramo062	i was doing pacman -S python-websocket
+2016-12-24 12:18:07	 lramo062	i needed to do python2-websocket, fucking peice of shit python
+2016-12-24 12:18:52	 lramo062	idk do you think this is an issue or an added feature that he wants us to add... and btw chris i can't get slack to work unless ennio enables a xmpp setting for the group
+2016-12-24 12:19:24	 omart725	It is confusing the way he wrote it
+2016-12-24 12:19:52	 omart725	Yeah I think it's an issue that he wants us to fix 
+2016-12-24 12:20:02	 omart725	Rather than a feature
+2016-12-24 12:21:41	 lramo062	well it's working 
+2016-12-24 12:22:13	 lramo062	for me, it just doesn't display on the user-index beacuse there was a limit we set
+2016-12-24 12:22:26	 omart725	I think he wants to be able to create more than 4
+2016-12-24 12:23:48	 lramo062	yeah and just enable the ones you want but the max is going to be 4 on the user-index
+2016-12-24 12:24:00	 lramo062	from what ennio told me before
+2016-12-24 12:24:15	~Christian0411	Yo, Iwhats the command to join the server once in weechat
+2016-12-24 12:25:30	 lramo062	you need to follow the instructions on the git repository for matrix
+2016-12-24 12:25:52	~Christian0411	Im already all loaded. But it wont join
+2016-12-24 12:25:56	 lramo062	to install scripts on weechat you do /script install <script-name>
+2016-12-24 12:26:04	 lramo062	oh 
+2016-12-24 12:26:09	 lramo062	do /buffers
+2016-12-24 12:26:16	 lramo062	and see if matrix pops up 
+2016-12-24 12:26:55	 lramo062	it's /buffer ***
+2016-12-24 12:27:00	 lramo062	without the s 
+2016-12-24 12:27:33	 lramo062	and that's like the matrix admin thing so there you would join the channels but look at the instructions on git 
+2016-12-24 12:28:12	 omart725	What hit?
+2016-12-24 12:28:15	 omart725	Git 
+2016-12-24 12:28:30	 lramo062	github
+2016-12-24 12:28:42	 omart725	Which one?
+2016-12-24 12:28:48	 lramo062	https://github.com/torhve/weechat-matrix-protocol-script
+2016-12-24 12:30:06	 lramo062	ima go hit the gym cause it closes at 2:00pm, I'm waiting for ennio to reply but creating a package is working... if he wants to display more than 4 in the user side or disable the create new product button when there is 4 packages already active it would be really easy
+2016-12-24 12:30:18	~Christian0411	Bro, Im already loaded into matrix. How do I join this room
+2016-12-24 12:30:35	 lramo062	did you add your account
+2016-12-24 12:30:55	 lramo062	on matrix
+2016-12-24 12:30:58	~Christian0411	'Yeah
+2016-12-24 12:31:16	~Christian0411	Okay I got it
+2016-12-24 12:31:50	 lramo062	okay you on weechat ? yeeeeee
+2016-12-24 12:31:59	~Christian0411	Yeah I feel like a true hacker
+2016-12-24 12:33:38	 omart725	https://matrix.org/_matrix/media/v1/download/matrix.org/BArpyPajgsFAaResKUNbyIKq/ima_dd5ce45.jpeg
+2016-12-24 12:33:45	 omart725	What do I from here?
+2016-12-24 12:34:07	 omart725	I did what the github told me
+2016-12-24 12:34:23	 lramo062	You have to install the cjson dependency
+2016-12-24 12:34:26	~Christian0411	Okay I got you
+2016-12-24 12:34:34	~Christian0411	do luarocks install cjson
+2016-12-24 12:34:49	 lramo062	i had to isntall it from there  but my package manager like my version of brew had it
+2016-12-24 12:35:10	~Christian0411	If you moved everything correctly to the ~/.weechat/lua/autoload
+2016-12-24 12:35:19	~Christian0411	all you gotta do is weechat
+2016-12-24 12:35:23	~Christian0411	then /buffer
+2016-12-24 12:35:33	~Christian0411	then pick the buffer with /buffer *
+2016-12-24 12:35:33	 omart725	I got an error install
+2016-12-24 12:35:42	~Christian0411	sudo luarocks 
+2016-12-24 12:35:49	~Christian0411	sudo luarocks install cjson
+2016-12-24 12:36:04	 omart725	It said no query match found
+2016-12-24 12:36:11	 lramo062	i don't think that adam will get on this lmao 
+2016-12-24 12:36:39	~Christian0411	Yeah, Im not chatting on whatsapp ever again
+2016-12-24 12:36:54	 lramo062	dale im gonna go to the gym, let the weechat be among us all ( yooo i was watching silicon valley and that shit is live asf) 
+2016-12-24 12:37:03	 lramo062	dale peace out 
+2016-12-24 12:37:52	 omart725	Is it because I don't have luarocks?
+2016-12-24 12:39:11	~Christian0411	Is luarocks a valid command
+2016-12-24 12:39:26	 omart725	Yup
+2016-12-24 12:39:41	~Christian0411	Then you have luaroxks lol
+2016-12-24 12:40:36	~Christian0411	What does sudo luarocks install  cjson
+2016-12-24 12:40:47	 omart725	Same error. No query match found
+2016-12-24 12:41:58	~Christian0411	Do luarocks --update
+2016-12-24 12:43:06	 omart725	Not a conman 
+2016-12-24 12:43:17	 omart725	Gave me an invalid args error
+2016-12-24 12:43:32	 lramo062	Damn I forgot I can talk through my phone here
+2016-12-24 12:43:52	~Christian0411	luarocks --upgrade
+2016-12-24 12:44:05	~Christian0411	I'm just throwing rocks 
+2016-12-24 12:44:16	 omart725	Tampoco 
+2016-12-24 12:44:29	 lramo062	Do brew install lua
+2016-12-24 12:44:29	 omart725	There's no command for updating in the --help
+2016-12-24 12:44:45	 omart725	Already installed 
+2016-12-24 12:44:55	~Christian0411	Okay do weechat 
+2016-12-24 12:45:12	~Christian0411	If it says matrix loaded then you are good. 
+2016-12-24 12:45:16	 lramo062	No he had weechat
+2016-12-24 12:45:44	~Christian0411	Do weechat to see what happens. 
+2016-12-24 12:45:53	 omart725	Look at the picture I sent 
+2016-12-24 12:45:57	 lramo062	Wait Wait
+2016-12-24 12:46:13	 lramo062	Oscar okay did you follow the guide from the link I sent ?
+2016-12-24 12:46:15	~Christian0411	I don't see any picture. 
+2016-12-24 12:47:40	 omart725	It can't find the cjson
+2016-12-24 12:47:46	 omart725	I did follow the instructions Lester
+2016-12-24 12:47:49	 lramo062	Okay
+2016-12-24 12:48:09	 lramo062	So do luarocks --help and send me a pic
+2016-12-24 12:49:12	 omart725	https://matrix.org/_matrix/media/v1/download/matrix.org/rIGSBWLLgPpPGSzdHPQCQWPG/ima_4d7f191.jpeg
+2016-12-24 12:50:21	 omart725	https://matrix.org/_matrix/media/v1/download/matrix.org/xevKMfXkpPlkHdsIIdRtBDfv/ima_02a477d.jpeg
+2016-12-24 12:53:02	 lramo062	Damn and what does sudo luarocks install cjson do?
+2016-12-24 12:53:22	 omart725	It was supposed to be luarocks install lua-cjson
+2016-12-24 12:53:35	 lramo062	Try cjson
+2016-12-24 12:54:24	~Christian0411	Oh yeah that's right 
+2016-12-24 12:55:16	 omart725	So now on weechat, it doesn't give me the no cjson file errors. I set my user and pass and did /matrix connect. Now what?
+2016-12-24 12:55:45	 omart725	I did /buffer 
+2016-12-24 12:56:09	 lramo062	Ask Chris I forgot what I did after that
+2016-12-24 12:56:21	~Christian0411	Yeah /buffer should show loca
+2016-12-24 12:56:32	 lramo062	You set up your account on matrix?
+2016-12-24 12:56:33	~Christian0411	Then just do /buffer and the number. 
+2016-12-24 12:57:07	 omart725	It doesn't it just says:
+2016-12-24 12:57:07		[1] core.weechat (notify:all)
+2016-12-24 12:57:28	 lramo062	Follow the instructions on the github , add your account
+2016-12-24 12:57:40	 lramo062	And then it should show the buffers with loca
+2016-12-24 12:58:28	~Christian0411	Try /join !ORBhSpdCCuCXvPeCwl:matrix.org
+2016-12-24 12:58:39	~Christian0411	Then do /buffer
+2016-12-24 13:02:24	 omart725	It's saying my password is wrong 
+2016-12-24 13:02:35	 omart725	I double checked it already though 
+2016-12-24 13:02:43	 lramo062	Damn brah you a mess
+2016-12-24 13:03:46	~Christian0411	Idk
+2016-12-24 13:03:57	 omart725	It doesn't let me do /matrix connect anymore 
+2016-12-24 13:04:10	~Christian0411	What does it say?
+2016-12-24 13:04:40	 lramo062	Just close wee chat and try to add the account again
+2016-12-24 13:04:47	 lramo062	Like it says on the git
+2016-12-24 13:05:03	 lramo062	I don't think I ever did like a /join shwieifondbee what ever Chris sent
+2016-12-24 13:05:22	 omart725	I already tried adding it again
+2016-12-24 13:06:12	~Christian0411	What does it say 
+2016-12-24 13:07:46	 omart725	https://matrix.org/_matrix/media/v1/download/matrix.org/hHSQKdZwaGutQTdpyaBUGCMn/ima_e8438d1.jpeg
+2016-12-24 13:09:22	 omart725	It looks like matrix is loading but it just says my password is wrong
+2016-12-24 13:09:38	~Christian0411	Find the /set command on the matrix GitHub that shows all the confit
+2016-12-24 13:09:45	~Christian0411	Config*
+2016-12-24 13:11:46	 omart725	https://matrix.org/_matrix/media/v1/download/matrix.org/RGstGTevgnZNMZvouzKgUleK/ima_0730a3e.jpeg
+2016-12-24 13:13:44	~Christian0411	That's strange on mine it shows the password in plain text. 
+2016-12-24 13:14:39	 omart725	It does it sometimes 
+2016-12-24 13:14:42	 omart725	Idk why
+2016-12-24 13:15:19	 omart725	I got it!
+2016-12-24 13:15:47	 omart725	Idk what the fuck I did. I just kept changing and setting the password
+2016-12-24 13:15:48	~Christian0411	Now you are an official hacker 
+2016-12-24 13:16:04	 omart725	How to i close this thing?
+2016-12-24 13:16:14	~Christian0411	/exit
+2016-12-24 13:16:41	 lramo062	Lmao
+2016-12-24 13:17:00	 omart725	Cool. Yo, this is pretty cool. Makes me feel like a pro
+2016-12-24 13:19:00	 lramo062	Ima put target on this shit
+2016-12-24 13:19:36	 omart725	Lmao, those poor white folks aren't gonna understand a word you sat
+2016-12-24 13:19:38	 omart725	say*
+2016-12-24 13:21:11	 lramo062	Lmao they gonna think I'm Mexican I can already see it
+2016-12-24 13:21:22	 lramo062	Ima be like ayyy eseee was good
+2016-12-24 13:21:32	 omart725	Lmao
+2016-12-24 13:24:18	 lramo062	Ay homes I don't want the management seeing our convos , get on this new underground chat tunnel called weechat
+2016-12-24 13:24:24	 lramo062	It's not the Chinese one homes
+2016-12-24 13:30:47	 lramo062	Bruh Adams never gonna get on this shit lmao
+2016-12-24 13:31:04	 lramo062	Ima leave the whatsapp
+2016-12-24 13:31:12	~Christian0411	Yeah me too. 
+2016-12-24 13:31:57	 lramo062	Try to find the script for images
+2016-12-24 13:32:05	 lramo062	I'm sure there's a script to see it on terminal or something
+2016-12-24 13:34:17	 lramo062	This is amazing though like if our phone dies we can just hit this shit up
+2016-12-24 13:34:35	 omart725	Yo chris, did you get the american airlines email about resubmitting the intern application on their new system?
+2016-12-24 13:38:08	~Christian0411	Yes. 
+2016-12-24 13:38:15	~Christian0411	Yeah Lester exactly. 
+2016-12-24 13:38:21	~Christian0411	I hated whatsapp because of that. 
+2016-12-24 13:38:31	 lramo062	Bro Adam gave me a recruiter for capital one and like they even asked me when I was available to interview but then they asked for proof I went to shpe lmao
+2016-12-24 13:38:34	 lramo062	I never replied
+2016-12-24 13:40:13	 lramo062	I emailed them saying oh I met you at shpe and im interested in interviewing , they asked me when I was available to fly out and then they tried my ass lol
+2016-12-24 13:40:52	 omart725	Yo hook it up
+2016-12-24 13:41:28	 lramo062	It was late
+2016-12-24 13:41:33	 lramo062	Kate
+2016-12-24 13:41:39	 lramo062	Hold up
+2016-12-24 13:42:22	 lramo062	kate.cirillo@capitalone.com
+2016-12-24 13:45:51	 omart725	How did you start the convo with her?
+2016-12-24 13:47:48	 lramo062	Hey we met at shpe and im really interested interning for capital one here's my resume
+2016-12-24 13:47:54	 lramo062	And I attached the resume
+2016-12-24 13:49:47	 omart725	Alright cool. I hit her up
+2016-12-24 13:49:49	 omart725	Thanks
+2016-12-24 14:00:04	 lramo062	Brah the shit they talk about in that show silicon valley is serious asf I'm lost asf
+2016-12-24 14:00:20	 lramo062	Creating there cloud architecture with blah blah blah
+2016-12-24 14:00:28	 lramo062	I feel like an IT major
+2016-12-24 14:02:05	~Christian0411	It's just buzz words bro. With no meaning. 
+2016-12-24 14:05:37	 lramo062	Lmaoo maybe. But the show is so accurate, there's an episode where the start needs to find someone for thier cloud thing and they here about a super young kid in like his 16s who everyone hyped up cause apparently he hacked into like chase or someshit
+2016-12-24 14:07:23	 lramo062	And the kid goes oh aren't you alittle bit to old  for like doing all that start up shit cause it's true like on reddit I read that programmers have a hard time in there mid thirties trying to land a job because employers think they're too old
+2016-12-24 14:08:00	~Christian0411	Yeah but we gonna make it. 
+2016-12-24 14:08:37	 lramo062	We should actually try to make LOCA a real thing
+2016-12-24 14:08:55	~Christian0411	But not web dev. 
+2016-12-24 14:09:02	 lramo062	To put on your resume and shit as a "startup"
+2016-12-24 14:09:08	~Christian0411	I've been saying it, apps is where it's at. 
+2016-12-24 14:09:21	 lramo062	Nah bro apps are so 2015
+2016-12-24 14:09:24	 lramo062	2016*
+2016-12-24 14:09:28	 lramo062	It's all about services
+2016-12-24 14:10:16	 lramo062	Like APIs
+2016-12-24 14:10:36	~Christian0411	Nah man. Name someone getting rich off apis. No moneyization. 
+2016-12-24 14:10:50	~Christian0411	Less and less people are willing to pay for an API. 
+2016-12-24 14:11:57	 lramo062	True true
+2016-12-24 14:12:19	 lramo062	I get my open-source and my financials mixed
+2016-12-24 14:12:22	~Christian0411	We just need a little app to get bought by a bigger company. 
+2016-12-24 14:12:37	 lramo062	Like WhatsApp lmao
+2016-12-24 14:12:43	~Christian0411	Lester Stallman. 
+2016-12-24 14:13:33	 lramo062	The idea is tough though like the rwm was cool but it depends on other companies APIs
+2016-12-24 14:15:56	~Christian0411	We gotta make a bot that plays fantasy football for money. 
+2016-12-24 14:16:32	~Christian0411	Analyze player stats and choose the best players. Doesn't need to be football it could be any sport. 
+2016-12-24 14:16:41	~Christian0411	Use machine learning. 
+2016-12-24 14:16:53	~Christian0411	We got the espn API for stats. 
+2016-12-24 14:17:24	 lramo062	Track the XMLHTTPREQUEST
+2016-12-24 14:17:34	 lramo062	And grab thier internal Api
+2016-12-24 14:17:38	 lramo062	I'm a bro hacker here
+2016-12-24 14:18:00	 lramo062	Check out https://github.com/lramo062/emacs-nba-scores
+2016-12-24 14:30:20	~Christian	Siiick. 
+2016-12-24 14:31:05	 lramo062	look check this out too 
+2016-12-24 14:31:13	 lramo062	https://hugo.md/post/the-perfect-weechat-setup-2/
+2016-12-24 14:43:11	 Oscar	I like how it looks default 
+2016-12-24 14:43:35	 lramo062	 true 
+2016-12-24 14:44:32	 lramo062	bro i tried to connect to like an irc channel like playing around with it and now it always tries to connect on start up
+2016-12-24 14:44:36	--	@lramo062:matrix.org is now known as lramo062
+2016-12-24 14:44:45	--	Oscar is now known as lramo062
+2016-12-24 14:44:57	 Lester	ay
+2016-12-24 14:46:36	 Oscar	Lmao finally bro!
+2016-12-24 14:48:27	 Lester	im messing around with this shit it's raw
+2016-12-24 14:54:18	 Lester	chris you dont ever turn off your computer right?
+2016-12-24 14:54:42	~Christian	Nope never. 
+2016-12-24 14:55:26	 Lester	damn bryan was telling me that lol, he says he turns it off at night or whatever 
+2016-12-24 14:55:54	 Lester	i do too, i just let it sleep during the day
+2016-12-24 15:02:05	 Oscar	I never turn mine off either. Are there any side effects to not doing so?
+2016-12-24 15:02:17	~Christian	Yeah he's always given me shit for that. There are NO downsides. 
+2016-12-24 15:02:36	~Christian	It's a computer not a fucking person that needs sleep. 
+2016-12-24 15:07:16	 Lester	I would just think like that running a system like arch if you upgrade packages you should reboot
+2016-12-24 15:08:38	~Christian	Yeah but that's like after you do something. Overnight I leave that shit. 
+2016-12-24 15:11:31	 Oscar	Christian: remember how when we restarted our computers, it cleared some memory. Maybe that's why you should turn it off?
+2016-12-24 15:11:59	 Oscar	I probably won't do it but I'm just saying, that might be a pro
+2016-12-24 15:12:00	~Christian	I would only do it if I have an issue. 
+2016-12-24 15:12:08	 Oscar	Yeah same
+2016-12-24 15:12:45	~Christian	Back in middle school I set my shit up to turn off at 2 am and turn on at 6 pm because that's when I had to get back to my house. 
+2016-12-24 15:13:28	 Oscar	Back in middle school I was slinging dope 
+2016-12-24 15:18:24	 Lester	Lmao
+2016-12-24 15:18:33	 Lester	U was slinging K
+2016-12-25 13:09:14	 lramo062	why 
+2016-12-25 13:09:29	~Christian	Because it is above C level!
+2016-12-25 13:09:32	~Christian	Hahahahaha
+2016-12-25 13:09:33	~Christian	Hahaha
+2016-12-25 13:09:37	 lramo062	wow
+2016-12-25 13:09:36	~Christian	Kill me
+2016-12-25 13:09:46	 lramo062	i hate python lol
+2016-12-25 13:10:05	 lramo062	yo vicky bakery is funny dude like its an upscale bakery
+2016-12-25 13:10:21	~Christian	That's the one on 4th right 
+2016-12-25 13:10:40	 lramo062	like they have the prettiest bakery girls ever, you should see all the cuban people that go, and nah the nice one on coral way
+2016-12-25 13:11:16	~Christian	lol I go to the one on 4th in Hialeah. 
+2016-12-25 13:11:22	~Christian	It's not classy. 
+2016-12-25 13:13:12	 lramo062	yeah that one isn't at all
+2016-12-25 13:13:24	 lramo062	i literally live on that street 
+2016-12-25 13:13:26	 lramo062	4th 
+2016-12-25 13:16:31	~Christian	My grandma too lol
+2016-12-25 13:18:53	 lramo062	brah i just noticed today that no matter where you live in miami, like it's miami 
+2016-12-25 13:19:23	 lramo062	no matter if it's coral gables like you're always gonna have that cuban craziness everywhere
+2016-12-25 13:19:39	 lramo062	i think ill rather wear layers lmao
+2016-12-25 16:53:54	 lramo062	bruh we need to get adam in this bitch 
+2016-12-25 16:54:19	~Christian	Idk how, he just needs to do it.
+2016-12-25 16:58:18	 lramo062	i wonder how google gets all their info from 
+2016-12-25 16:58:27	 lramo062	like when you google a player's stats
+2016-12-25 16:58:45	 lramo062	like does it have programs for each thing like how does that shit work
+2016-12-25 16:58:53	~Christian	I was actually thinking about this while watching the dolphin game
+2016-12-25 16:59:19	~Christian	Idk man google has access to soo much data
+2016-12-25 16:59:25	 lramo062	yeah, like you google the football game and it directly tells you the information without going to any site 
+2016-12-25 16:59:40	~Christian	Yup
+2016-12-25 16:59:44	~Christian	and it updates
+2016-12-25 18:25:37	~Christian	Yooo
+2016-12-25 18:37:50	 lramo062	Yayo
+2016-12-25 18:41:12	 lramo062	what do you think i should do in terms of programming on the go 
+2016-12-25 18:41:30	~Christian	Use your laptop 
+2016-12-25 18:41:48	 lramo062	should i set up my computer as a server ? should I install linux on my mac? use a raspberry pi?
+2016-12-25 18:46:33	~Christian	I mean since you are all terminal based you can ssh and code there but that can be slow. I would just setup like a git server or use github for all the code. 
+2016-12-25 18:51:08	 lramo062	!
+2016-12-25 18:53:05	 lramo062	idk but i want like the same enviorment 
+2016-12-25 18:56:19	 lramo062	yoo did you install the buffer.pl script for weechat
+2016-12-25 18:57:14	~Christian	No. 
+2016-12-25 18:57:50	~Christian	You should have just bought the monitor and a powerful laptop then. 
+2016-12-25 18:58:12	~Christian	Boom same environment everywhere. 
+2016-12-25 19:03:13	 lramo062	nah nothing's like having this bad boy
+2016-12-25 19:03:41	 lramo062	damn brah i fucked up I installed it to view all my buffers always but now it takes up too much room to view the text
+2016-12-25 19:04:57	~Christian	Uninstall
+2016-12-25 19:13:06	 Lester	finally 
+2016-12-25 19:13:10	 Lester	way better now
+2016-12-25 19:30:13	 Oscar	 
+2016-12-25 19:30:18	 Oscar	A
+2016-12-25 19:30:37	 Oscar	    
+2016-12-25 19:31:42	 Oscar	 
+2016-12-25 19:38:30	 Lester	yeo i got gpu programming in clojure with OpenCL (which i hear is like a compile once run everywhere thing)
+2016-12-25 19:39:48	 Lester	i just don't know how to use it lol
+2016-12-25 19:42:25	 Oscar	 
+2016-12-25 19:45:37	 Oscar	 
+2016-12-25 19:46:06	 Lester	oscar your messages are blank lines
+2016-12-25 19:46:12	 Lester	did you mean to say something
+2016-12-25 19:46:19	 Lester	or are they pics
+2016-12-25 19:47:00	~Christian	He's writing a notification plugin
+2016-12-25 19:47:02	~Christian	And testing. 
+2016-12-25 19:47:17	 Lester	oh shit 
+2016-12-25 19:47:18	 Oscar	yeah lol
+2016-12-25 19:48:01	~Christian	Yeah that's my boi 
+2016-12-25 19:49:05	 Lester	what's your plan
+2016-12-25 19:49:52	 Oscar	The docs are confusing. I'm trying to figure out what parameters are needed
+2016-12-25 19:50:26	 Oscar	I have my script loading and sending a mac notification when weechat loads up but thats it lol
+2016-12-25 19:51:20	 Lester	i think theres already a notification one for osx
+2016-12-25 19:52:47	~Christian	There is but he's making his own. He has experience with notifications on OS X
+2016-12-25 19:53:49	 Oscar	Yeah there are a bunch. I just wanted to make my own
+2016-12-25 19:55:55	 Lester	aight post it on github and ill try to write one for i3
+2016-12-25 19:56:14	 Lester	ill like for a version based off yours or something idk how it works
+2016-12-25 20:02:50	 Lester	 fork*
+2016-12-25 20:03:09	 Lester	cause it looks like i cant use this OpenCL this shit complicated
+2016-12-25 20:04:10	 Oscar	 
+2016-12-25 20:05:15	 Oscar	Aa 
+2016-12-25 20:08:08	 Lester	brah ya'll wanna know my favorite sports team
+2016-12-25 20:08:16	 Lester	the seatlle mist
+2016-12-25 20:11:19	 Oscar	What the hell is that?
+2016-12-25 20:14:55	 Lester	woman football
+2016-12-25 20:28:08	 Oscar	Guys, what would be the server name for our channel?
+2016-12-25 20:31:58	 Lester	Loca Development im guessing
+2016-12-25 20:33:16	 Oscar	I think that's the channel name
+2016-12-25 20:33:27	 Oscar	Chris, you made the chat, do you know?
+2016-12-25 20:33:35	 Lester	oh 
+2016-12-25 20:33:40	 Lester	i feel you 
+2016-12-25 20:33:41	 Oscar	i think its lua
+2016-12-25 20:34:36	~Christian	!ORBhSpdCCuCXvPeCwl:matrix.org
+2016-12-25 20:36:05	 Oscar	and the channel name?
+2016-12-25 20:39:18	 Lester	LOCA Developmemnt
+2016-12-25 20:41:18	 Lester	brah i think im gonna uninstall i3
+2016-12-25 20:41:32	 Lester	and do xmonad and learn haskell
+2016-12-25 20:53:16	 Lester	i've become so richard stallman 
+2016-12-25 20:53:24	 Lester	i can't stand free floating windows
+2016-12-25 20:53:58	 Oscar	Lmao
+2016-12-25 20:55:35	 Lester	what time tomorrow (Adam is asking)
+2016-12-25 20:55:55	 Lester	he got a new laptop
+2016-12-25 20:56:08	 Lester	he got the dell xps 14 programming edition
+2016-12-25 20:56:27	 Oscar	I don't believe you 
+2016-12-25 20:56:34	 Oscar	I'll be there like 11-12
+2016-12-25 21:03:27	 Lester	ok
+2016-12-25 21:49:19	~Christian	 Yeah  me 2
+2016-12-25 21:57:48	 Lester	Aight

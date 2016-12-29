@@ -1,0 +1,180 @@
+2016-12-27 13:07:08	 Lester	lmao that shit is do dumb
+2016-12-27 13:07:25	 Lester	so *
+2016-12-27 13:15:25	 Lester	bruh what should I work on
+2016-12-27 13:15:38	 Lester	i wanna do something in Java or clojure
+2016-12-27 13:15:51	~Christian	Learning web assembly and compiling Haskell for it. 
+2016-12-27 13:16:03	~Christian	Then make a website written in Haskell. 
+2016-12-27 13:17:26	 Lester	nah im good
+2016-12-27 13:17:36	 Lester	i don't wanna do that shit lmao 
+2016-12-27 13:17:41	~Christian	You gotta be on the cutting edge. 
+2016-12-27 13:18:17	 Lester	idk F# and haskell are cool but i enjoy doing lisp or clojure
+2016-12-27 13:18:39	~Christian	Do GPU parallelization with clojure. 
+2016-12-27 13:20:16	 Lester	idk i have to learn OpenCL, but there aren't any examples online 
+2016-12-27 13:21:01	 Lester	the only thing is that openCL is like the same in every language so if i learn it in java i can use the same functions in clojure or what ever language
+2016-12-28 16:19:21	 Lester	nah boi it's all about that 2K 
+2016-12-28 16:19:37	 Lester	yeo
+2016-12-28 16:23:53	 Lester	how do you scroll up on weechat?
+2016-12-29 12:59:04	 Lester	finally bro, my weechat wasn't working
+2016-12-29 12:59:44	 Lester	oscar i read through the script and have a few questions
+2016-12-29 13:01:21	 Oscar	Dimelo
+2016-12-29 13:01:36	 Oscar	Dimelo
+2016-12-29 13:01:54	 Lester	so since you have the script running on weechat, does the script actually wait for weechat to send it the message or does the script prompt the weechat program every second or something for new data
+2016-12-29 13:02:17	 Lester	i think thats like polling or something
+2016-12-29 13:02:18	~Christian	The script runs a function anytime a buffer is updated with print. 
+2016-12-29 13:02:31	~Christian	It hooks into a weechat function. 
+2016-12-29 13:02:58	 Lester	oh so when weechat sees that the buffer has been modified it sends that data to the script
+2016-12-29 13:03:25	~Christian	Yes in a way. 
+2016-12-29 13:03:49	 Lester	okay, was this a weechat api thing
+2016-12-29 13:03:58	 Lester	like weechat has a built in api for that?
+2016-12-29 13:04:23	 Oscar	Yeah
+2016-12-29 13:05:25	 Lester	in linux i was researching that i have to use libnotify to get desktop notifcations working with GTK or QT graphics
+2016-12-29 13:05:50	~Christian	To modify the script to work on Linux would be very very simple
+2016-12-29 13:06:08	~Christian	Just change the method of notification and use the same code. 
+2016-12-29 13:06:22	 Lester	i'm gonna edit my i3 config to start a weechat terminal in another workspace (theres' 9) and try to work with your script to make it work for linux
+2016-12-29 13:06:32	 Lester	is it okay if i fork 
+2016-12-29 13:06:42	~Christian	The reason is terminal-notifier is a mac thing. To make it cross compatible we would need to use a different notification system. 
+2016-12-29 13:06:56	 Lester	Christian
+2016-12-29 13:07:07	 Lester	how do I mention you so it's red ?
+2016-12-29 13:07:11	 Lester	with @?
+2016-12-29 13:07:19	~Christian	You just did
+2016-12-29 13:08:03	 Lester	oh okay... well i was gonna tell you that my script is fetching fantasy point leaders for NBA players lol
+2016-12-29 13:08:35	 Lester	some machine learning guy who has a ton of python projects stared my project, he strictly does machine learning for sports i think
+2016-12-29 13:09:08	 Lester	oh i see the terminal notifier on the script
+2016-12-29 13:09:33	~Christian	Probably one of those guys that makes money from it. My bro was telling me the top fantasy sports people are all using bots. 
+2016-12-29 13:09:56	 Lester	Let me look up his page
+2016-12-29 13:11:19	 Lester	https://github.com/christopherjenness
+2016-12-29 14:59:44	 Lester	nvm i got it working !!
+2016-12-29 15:00:11	 Lester	yo!! some one stared my project again for emacs and i was snooping on his ass
+2016-12-29 15:00:36	 Lester	and they contribute to a raw ass emacs plugin that displays a dashboard on startup
+2016-12-29 15:00:40	 Oscar	Aye! What did you find out about them?
+2016-12-29 15:01:13	 Lester	like on startup ot can display what ever you want, recent files, run a script and output it to the dashboard etc..
+2016-12-29 15:01:30	 Lester	look at how they have nba scores on their dashboard
+2016-12-29 15:01:37	 Lester	https://github.com/qorrect/emacs-dashboard-nba
+2016-12-29 15:03:48	 Lester	this nigga snapped
+2016-12-29 15:04:31	 Lester	im gonna try to run his code and see what's going on after, but yoo now that I got the notification running 
+2016-12-29 15:04:37	 Lester	what would i have to edit on your script
+2016-12-29 15:05:10	 Oscar	What do you mean?
+2016-12-29 15:05:38	 Oscar	Oh you got notifications working independent of the script
+2016-12-29 15:06:06	 Lester	so instead of terminal notifier i have another tool to get me the notifications running
+2016-12-29 15:06:09	 Lester	yeah 
+2016-12-29 15:06:37	 Lester	so to call it from terminal it would be for me "notify-send <message goes here>"
+2016-12-29 15:07:07	 Lester	ahh i see
+2016-12-29 15:07:50	 Oscar	The function to make the notification is only called once, at the bottom. The code above it is to determine when not to send a notification
+2016-12-29 15:08:25	 Lester	i see, i'm gonna have to see my notification options because you have title, subtitle and message
+2016-12-29 15:08:25	 Oscar	So just replace the function call to notify that's at the bottom with whatever you need 
+2016-12-29 15:12:10	 Lester	okay i think i got it
+2016-12-29 15:12:33	 Lester	i can't believe im editing a python file
+2016-12-29 15:12:45	 Oscar	It's beautiful right
+2016-12-29 15:12:53	 Oscar	Such a crisp language
+2016-12-29 15:12:55	 Oscar	so much power
+2016-12-29 15:14:08	 Lester	what's the format function?
+2016-12-29 15:15:10	 Oscar	What format function?
+2016-12-29 15:15:18	 Lester	.format()
+2016-12-29 15:15:52	 Oscar	Oh, thats just something terminal-notifier uses to format the notification
+2016-12-29 15:15:59	 Oscar	You shouldnt need any of that code
+2016-12-29 15:16:06	 Oscar	Since youre using something else
+2016-12-29 15:19:24	 Lester	okay send me something
+2016-12-29 15:19:32	 Oscar	something
+2016-12-29 15:21:43	 Lester	test
+2016-12-29 15:22:09	 Lester	send it again
+2016-12-29 15:22:21	 Lester	my bad i fucked up something but the rest works
+2016-12-29 15:22:34	 Oscar	So it's working?
+2016-12-29 15:22:45	 Lester	yeah
+2016-12-29 15:23:05	 Lester	it works but it's not displaying the message right im fucking up the formatting
+2016-12-29 15:25:02	 Lester	keep messaging me
+2016-12-29 15:25:57	 Lester	someone
+2016-12-29 15:25:58	 Lester	plz
+2016-12-29 15:26:09	 Oscar	rain drop
+2016-12-29 15:26:12	 Oscar	drop top
+2016-12-29 15:26:19	 Oscar	crock pot
+2016-12-29 15:26:21	 Lester	aight hold on 
+2016-12-29 15:26:24	 Oscar	hot shot
+2016-12-29 15:29:22	 Lester	https://matrix.org/_matrix/media/v1/download/matrix.org/KQgjCYBSjnWVwIFtQREYYhvz/file1483043332822.jpg
+2016-12-29 15:29:23	 Lester	That's what I want to do that I run this command
+2016-12-29 15:30:06	 Lester	notify-send "Weechat\n" "Oscar\n my message"
+2016-12-29 15:30:31	 Lester	os.system('notify-send "' + title + '\n" ' + '"' + subtitle + '\n' + message + '"')
+2016-12-29 15:30:45	 Lester	so thats how i have it but it says im missing a "
+2016-12-29 15:33:02	 Oscar	You're trying to have python run that command from the terminal?
+2016-12-29 15:34:09	 Lester	well thats how the command is from terminal so from the python file i ran that snippet i sent you where it said os.system fdfdsfsfsdf
+2016-12-29 15:35:25	 Lester	send something again i think i got it
+2016-12-29 15:35:36	 Lester	cause before it was just saying oscar, not the message
+2016-12-29 15:35:37	 Oscar	rain drop
+2016-12-29 15:35:43	 Oscar	drop top
+2016-12-29 15:35:55	 Oscar	test
+2016-12-29 15:36:01	 Lester	okay getting them
+2016-12-29 15:36:04	 Lester	hold up 
+2016-12-29 15:37:06	 Lester	okay dale
+2016-12-29 15:37:11	 Lester	manda paqa
+2016-12-29 15:37:21	 Oscar	rain drop
+2016-12-29 15:37:25	 Oscar	drop top
+2016-12-29 15:39:32	 Lester	one more
+2016-12-29 15:39:37	 Lester	oh 
+2016-12-29 15:39:50	 Lester	tell me what the parameters mean 
+2016-12-29 15:39:52	 Oscar	what happened?
+2016-12-29 15:40:01	 Lester	like title, subtitle
+2016-12-29 15:39:59	 Oscar	which ones?
+2016-12-29 15:40:57	 Oscar	Title is the largest and is above in bold, subtitle is under title, and message is at the bottom and holds the message you want to send
+2016-12-29 15:41:12	 Oscar	for us, title is sender name, subtitle is buffer name and message is message sent
+2016-12-29 15:42:03	 Lester	okay so title is like the person ?
+2016-12-29 15:42:11	 Lester	subtitle is the chat name
+2016-12-29 15:42:16	 Lester	and message is the message
+2016-12-29 15:42:24	 Oscar	Exactlu
+2016-12-29 15:42:27	 Oscar	Exactly*
+2016-12-29 15:44:10	 Lester	okay i still get an erorr 
+2016-12-29 15:44:15	 Lester	with the end of file parsing
+2016-12-29 15:45:01	 Lester	i think it's beacuse im doing something like this '"included a double quote' + '" end double quote'
+2016-12-29 15:45:10	 Lester	can that throw an error in python?
+2016-12-29 15:46:09	 Oscar	yeah do try: except:
+2016-12-29 15:47:49	 Oscar	then raise Errorname()
+2016-12-29 15:47:54	 Oscar	http://stackoverflow.com/questions/2052390/manually-raising-throwing-an-exception-in-python
+2016-12-29 15:50:39	 Lester	okay send another message, i'm using the formatter
+2016-12-29 15:50:45	 Lester	.format with the {}
+2016-12-29 15:50:59	 Oscar	test
+2016-12-29 15:51:55	 Lester	okay nah dude it's something else idk why it's throwing the mismatching "
+2016-12-29 15:56:19	 Oscar	Idk, you could try running the command directly to the terminal through python. For my wallpaper script, I run all the git commands to update the webpage with the new picture
+2016-12-29 15:56:49	 Lester	idk 
+2016-12-29 15:57:22	 Lester	That's what I got
+2016-12-29 15:57:54	 Lester	https://matrix.org/_matrix/media/v1/download/matrix.org/AdZcbXgrgQmsdfatFtmsIAvk/file1483045034366.jpg
+2016-12-29 15:59:22	 Oscar	Try doing this. Import this: from subprocess import call
+2016-12-29 15:59:44	 Oscar	https://matrix.org/_matrix/media/v1/download/matrix.org/cwQhHMMKEYJFUcCOoXHoGpAV/ima_4785f52.jpeg
+2016-12-29 15:59:55	 Lester	nah brah im done with python
+2016-12-29 16:00:00	 Lester	i don't fuck with it
+2016-12-29 16:00:35	 Oscar	You're missing out 
+2016-12-29 16:01:45	 Lester	idk brah we just got beef foo 
+2016-12-29 16:01:52	 Lester	nothing else to it 
+2016-12-29 16:01:59	 Lester	can't do anything about it
+2016-12-29 16:08:41	 Oscar	lmao
+2016-12-29 16:14:25	 Lester	now it just don't even send notifications lmao god damn 
+2016-12-29 16:14:36	 Lester	yeo ya'll should boost and get sabina hot
+2016-12-29 16:14:58	 Oscar	Nah bro, there's enough steam in that chat already
+2016-12-29 16:15:47	 Lester	lmao you think so
+2016-12-29 16:17:12	 Oscar	Yeah lol
+2016-12-29 16:24:17	 Lester	bruh i bought 2grams of the wax shit shit runs exepensive
+2016-12-29 16:36:22	 Lester	oh shit i got it boy
+2016-12-29 16:36:27	 Lester	the notifications work now
+2016-12-29 16:36:42	 Lester	i did the from subprocess import call
+2016-12-29 16:36:51	 Oscar	I told you
+2016-12-29 16:36:53	 Lester	and used call and just passed it my parameters
+2016-12-29 16:37:15	 Oscar	When making a call to the terminal directly, you need to use call
+2016-12-29 16:37:42	 Oscar	Starting beef with python for no reason
+2016-12-29 16:37:51	 Lester	nah brah we still got beef
+2016-12-29 16:38:00	 Lester	that shit isn't settled just yet
+2016-12-29 16:39:05	 Lester	python is just like sabina 
+2016-12-29 16:39:36	 Lester	where as lisp is like adam, it never bothers you, you don't even know its there
+2016-12-29 16:40:52	 Oscar	I'd say chris is any fpl, it never crashes or fails
+2016-12-29 16:42:44	 Lester	send something else oscar
+2016-12-29 16:42:53	 Oscar	money
+2016-12-29 16:43:19	 Lester	one more time for the game winnner
+2016-12-29 16:43:38	 Oscar	Haaaaaannn
+2016-12-29 16:43:58	 Lester	Yeet
+2016-12-29 16:44:06	 Lester	i got it
+2016-12-29 16:45:58	 Oscar	Sweet, now put that shit on your github
+2016-12-29 16:46:38	 Lester	all i changed really is one line
+2016-12-29 16:47:06	 Lester	idk how it works like do i fork it and make it an i3notification script thingy
+2016-12-29 16:47:08	 Lester	idk
+2016-12-29 16:48:05	 Oscar	I think so
+2016-12-29 16:49:19	 Lester	alright im gonna post the script and give you credit and then im gonna include like the extra configuration for the notify-send because it needs it's own config gile
+2016-12-29 16:49:23	 Lester	file*
+2016-12-29 16:49:53	 Oscar	Don't forget to give Chris credit too
+2016-12-29 16:50:06	 Lester	fuck that nigga
+2016-12-29 16:50:56	 Oscar	Lmao, he figured out the key function to make the whole thing work

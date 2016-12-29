@@ -9,6 +9,11 @@ cp ~/.config/i3/config ~/dotfiles/i3/config
 cp ~/.config/i3/lockScript.sh ~/dotfiles/i3/lockScript.sh
 cp -r ~/.config/i3/i3blocks ~/dotfiles/i3/
 
-
 # save compton
 cp ~/.config/compton/compton.conf ~/dotfiles/compton/compton.conf
+
+# save weechat config
+cp -r ~/.weechat ~/dotfiles/weechat
+
+# save dunstrc
+cp /usr/share/dunst/dunstrc ~/dotfiles/dunstrc

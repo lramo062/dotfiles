@@ -12,3 +12,5 @@ cp -r ~/dotfiles/i3/i3blocks ~/.config/i3/
 # restore compton
 cp ~/dotfiles/compton/compton.conf ~/.config/compton/compton.conf 
 
+# restore weechat
+cp -r ~/dotfiles/weechat ~/.weechat
