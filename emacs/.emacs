@@ -26,7 +26,7 @@
 
 ;; Color-Theme
 (if window-system
-    (load-theme 'doom-one t)
+    (load-theme 'dracula t)
   (load-theme 'wombat t))
 
 ;; Smooth scrolling
@@ -52,8 +52,8 @@
 
 
 ;; Font
-(set-default-font "Monaco")
-(set-face-attribute 'default nil :height 115)
+;;(set-default-font "Monaco")
+(set-face-attribute 'default nil :height 105)
 
 
 ;; No Splash-Screen
@@ -127,21 +127,3 @@
 
 (load-file "~/.emacs.d/nbaScores.el")
 ;;; END
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(eclim-eclipse-dirs
-   (quote
-    ("~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/")))
- '(eclim-executable "~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/eclim")
- '(package-selected-packages
-   (quote
-    (zenburn-theme ycm xterm-color w3m undo-tree twilight-bright-theme twilight-anti-bright-theme sublime-themes spacemacs-theme solarized-theme sml-modeline smex rich-minority rainbow-mode rainbow-delimiters projectile powerline org-gcal omnisharp monokai-theme material-theme magit leuven-theme js2-mode js-comint java-snippets helm-spotify helm-dash groovy-mode grandshell-theme gradle-mode goto-chg gotham-theme fsharp-mode fringe-helper flymake-jshint flymake-cursor f exec-path-from-shell epc emacsql-psql doom-themes cuda-mode creamsody-theme company-irony company-emacs-eclim color-theme-sanityinc-tomorrow clojure-mode-extra-font-locking cider calfw-gcal calfw ac-helm abyss-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

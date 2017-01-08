@@ -178,3 +178,139 @@
 2016-12-29 16:49:53	 Oscar	Don't forget to give Chris credit too
 2016-12-29 16:50:06	 Lester	fuck that nigga
 2016-12-29 16:50:56	 Oscar	Lmao, he figured out the key function to make the whole thing work
+2016-12-29 17:15:44	 Lester	yoo send me something so i can take a screenshot
+2016-12-29 17:16:11	 Oscar	Testing WeeChat Matrix Notifier
+2016-12-29 17:16:21	 Lester	perfect
+2016-12-29 17:16:38	 Oscar	Made it look official lol
+2017-01-01 20:14:11	 Lester	brah this is the fastest website ive ever used
+2017-01-01 20:14:13	 Lester	https://circleci.com/
+2017-01-01 20:14:22	 Lester	built on clojurescript
+2017-01-01 20:14:27	 Lester	tell me how fast that shit is
+2017-01-01 20:15:12	 Lester	adam i saw your neural network
+2017-01-01 20:15:18	~Christian	Very smooth on mobile
+2017-01-01 20:16:15	 Adam	I didn't build it I'm just training it
+2017-01-01 20:16:21	 Adam	But it's pretty cool right! 
+2017-01-01 20:16:29	 Adam	I'm trying to replicate that with another game
+2017-01-01 20:16:41	 Lester	oh dam brah i thought you built that shit i was about to say damn 
+2017-01-01 20:17:00	 Lester	this nigga finnished the course and finished two more this whole break
+2017-01-01 20:17:12	 Adam	Lol nah I would drop out of school if I could do that 
+2017-01-01 20:17:24	 Adam	I could do the neural net part of it 
+2017-01-01 20:17:34	 Adam	The problem is transmitting the data from chrome
+2017-01-01 20:17:38	 Adam	To a matrix 
+2017-01-01 20:17:47	 Adam	I'm trying to figure out how he did that 
+2017-01-01 20:18:53	 Lester	from chrome to what
+2017-01-01 20:18:55	~Christian	Hmmm probably by reading memory
+2017-01-01 20:19:23	 Adam	The dude has four inputs for his neural net
+2017-01-01 20:19:37	 Adam	Distance speed size and power 
+2017-01-01 20:19:48	 Adam	Power is for the jump 
+2017-01-01 20:20:02	 Adam	Now if I had that data I could do the neural net easy 
+2017-01-01 20:20:08	 Adam	And just train it with that
+2017-01-01 20:20:33	 Adam	But idk how he grabs it from chrome 
+2017-01-01 20:20:39	 Adam	Like those measurements 
+2017-01-01 20:20:48	 Adam	So power is not input 
+2017-01-01 20:20:52	 Adam	Sorry*
+2017-01-01 20:21:09	~Christian	Look into memory reading with something like cheat engine. You get the address in memory where he gets that info. 
+2017-01-01 20:21:20	 Adam	Hmm okay 
+2017-01-01 20:21:45	~Christian	Basically you get the address of variables etc in the program. 
+2017-01-01 20:22:08	 Adam	Okay I'll check it out
+2017-01-01 20:22:15	 Adam	It's pretty cool watching it train 
+2017-01-01 20:26:08	 Lester	this nigga chris is gonna snap in org
+2017-01-01 20:26:13	 Lester	who do you have it with?
+2017-01-01 20:26:27	 Adam	The only problem is that his input features aren't elaborate enough
+2017-01-01 20:26:45	 Adam	So it can't tell with  birds whether to duck or not 
+2017-01-01 20:27:01	 Lester	brah i haven't even looked at my schedule
+2017-01-01 21:01:10	 Lester	adam your a usual coffee advocate...
+2017-01-01 21:01:17	 Lester	do your hands shake alot?
+2017-01-01 21:01:28	 Lester	im trying to figure out if it's the coffee or the weed
+2017-01-01 21:05:01	 Lester	also give me a cool show to watch 
+2017-01-03 13:53:46	 Oscar	They went to Tariq's place to fuck
+2017-01-03 13:54:13	 Lester	damn brah 
+2017-01-03 13:54:35	 Lester	you know terrique isnt with that shit he a savage
+2017-01-03 13:59:37	 Oscar	Lmao
+2017-01-03 14:38:54	 Adam	bro im so excited to get my hands on tragets data
+2017-01-03 14:39:07	 Adam	i could do so many ML algorithms with that shit 
+2017-01-06 12:46:20	 Lester	bro heroku is live, production shit is so raw...
+2017-01-06 12:47:04	 Lester	like go on heroku's website and read the timeline graph shit, where it says get straight to building apps
+2017-01-06 12:47:40	 Adam	im going to a data conference with caro
+2017-01-06 12:47:48	 Adam	over spring break 
+2017-01-06 12:47:54	 Adam	who's down?
+2017-01-06 12:48:10	 Lester	the whole silicon valley show talks about all these steps... they built there own like platform like heroku but that shit is tough
+2017-01-06 12:48:20	 Lester	where is it ? Kansas?
+2017-01-06 12:48:25	 Adam	san jose
+2017-01-06 12:48:40	 Lester	where the fuck is that cali?
+2017-01-06 12:48:54	 Adam	yeah next to san fran
+2017-01-06 12:49:06	 Lester	how much 
+2017-01-06 12:49:18	 Lester	link me the event site 
+2017-01-06 12:50:47	 Adam	with tutorials it'll be $698 plus the flight which is like $450 round trip
+2017-01-06 12:51:33	 Lester	Adam where do you get 1000 dollars like that lol
+2017-01-06 12:51:48	 Lester	Oscar quick question about react
+2017-01-06 12:53:03	 Oscar	Yeah I'm not gonna spend 1000 on that
+2017-01-06 12:53:06	 Oscar	What's up Lester?
+2017-01-06 12:53:17	 Adam	bruh trappin
+2017-01-06 12:54:02	 Lester	I'm assuming you were doing some quick react with JS right ?
+2017-01-06 12:54:13	 Lester	was there like any object that held the app state?
+2017-01-06 12:54:17	 Lester	Or a state in general
+2017-01-06 12:57:16	 Oscar	Yeah you had to require the path of the page (state) you want to go to, make a switch case for the navigator and the export the module . I would have to show you the code I have. There's a good YouTube video but I don't remember the name 
+2017-01-06 12:58:06	 Lester	Hmm is it kinda like a root scope
+2017-01-06 12:59:26	 Lester	That was a question lol ^
+2017-01-06 13:00:15	 Lester	Forgot the ?
+2017-01-06 13:00:27	 Lester	Wow im shaky bro
+2017-01-06 13:01:01	 Oscar	Yeah you can pass variables when you change the state 
+2017-01-06 13:02:30	 Lester	Bro like I feel these frameworks are basically the same things
+2017-01-06 13:02:42	 Lester	Just with minor details that make it different
+2017-01-06 13:02:57	 Adam	You need to learn emberJS
+2017-01-06 13:03:11	 Lester	I heard ember was on the come up lol
+2017-01-06 13:03:49	 Lester	But nah I like reacts idea of components over  controllers
+2017-01-06 13:05:00	 Lester	And the intertwined js/html makes it so like you literally focus on that feature you're working on
+2017-01-06 13:06:36	 Oscar	Yeah I feel like they're similar, not much difference besides syntax. Maybe the best thing is that its native 
+2017-01-06 13:06:50	 Lester	Haven't checked out the react native stuff
+2017-01-06 13:06:57	 Lester	Just react for web apps
+2017-01-06 13:08:28	 Lester	and i haven't even looked at react, just Om the clojurescript wrapper for react
+2017-01-06 13:09:21	 Lester	yeo i think im gonna talk to ennio and tell him that im looking for other jobs cause my dad said he can't help me out with money this semester lol 
+2017-01-06 13:09:41	 Lester	he would give me like 50 dolllars a week but w.e i can't keep living off my savings account
+2017-01-06 13:13:43	 Adam	bruh i just saw my step moms resume
+2017-01-06 13:13:58	 Lester	what it  is
+2017-01-06 13:13:57	 Adam	that nigga knows more programming languages than i do
+2017-01-06 13:14:12	 Lester	you're step mom?
+2017-01-06 13:14:13	 Lester	wtf
+2017-01-06 13:14:17	 Adam	yeah
+2017-01-06 13:14:21	 Adam	but she is a chemist
+2017-01-06 13:14:25	 Lester	pic or it didnt happen
+2017-01-06 13:14:34	 Adam	lol she only knows like four tbh
+2017-01-06 13:14:38	 Adam	but she knows lisp
+2017-01-06 13:14:40	 Adam	http://biosorption.mcgill.ca/home_gn/najaCV-1104.pdf
+2017-01-06 13:14:50	 Lester	yeah brah lisp is whats up nigga 
+2017-01-06 13:15:02	 Lester	clojure, lisp and all the other fucking dilects 
+2017-01-06 13:15:27	 Adam	i knew she worked for the evergaldes foundation but i just found out this week that she is chief scientist
+2017-01-06 13:15:43	 Adam	check out that shit that is the resume we need
+2017-01-06 13:16:39	 Lester	brah that long ass resume
+2017-01-06 13:16:51	 Lester	yeah she knows basic, lisp, pascal 
+2017-01-06 13:17:11	 Adam	yeah its crazy
+2017-01-06 13:17:24	 Lester	lisp is also a very old programming language
+2017-01-06 13:17:26	 Adam	her sister is a comp sci professor in france 
+2017-01-06 13:17:34	 Lester	and it used to be taught in colleges back in the day
+2017-01-06 13:17:38	 Adam	and her research is in AI
+2017-01-06 13:20:39	 Lester	thats cray
+2017-01-06 13:23:57	 Oscar	That'll be us one day
+2017-01-06 13:24:18	 Lester	brah i can't have a resume that fat 
+2017-01-06 13:24:25	 Lester	i think that shit's crazy 
+2017-01-06 13:24:39	 Lester	too damn stressful to go in and edit
+2017-01-06 13:27:34	 Lester	like my resume is one page and that shit is annoying to edit
+2017-01-06 13:46:13	 Oscar	I want to have a format like GitHub readme's 
+2017-01-06 13:46:23	 Oscar	I think that would be beast
+2017-01-06 13:48:07	 Lester	Yeah I wanna do that too
+2017-01-06 13:48:13	 Lester	Markdown
+2017-01-06 13:48:56	 Lester	bro clojurescript complies so it gives you compile warnings on the browser if you do some fuck shit
+2017-01-06 13:49:01	 Lester	this is so live
+2017-01-06 13:50:07	 Lester	dude that's it next ennio project is in clojurescript whos with me
+2017-01-06 13:50:26	 Oscar	I'm down 
+2017-01-06 13:51:54	 Lester	like there's live reloading, an icon shows up when it realods... theres a fucking huge compile warning if you fuck up, and i already learned how to combine the client side with backend calls... i figured out the rout handeling like we're set
+2017-01-06 13:52:27	 Lester	if only haskell had like a js compiler like clojure
+2017-01-06 13:54:53	 Oscar	Yeah that would be powerful af
+2017-01-06 13:55:24	 Lester	im gonna link you guys a quick video like 20mins of clojurescript
+2017-01-06 13:56:23	 Lester	https://www.youtube.com/watch?v=uuuTvfommgU
+2017-01-06 13:59:15	 Lester	ontop of all this think about how we have all the Java capabilities plus javascript
+2017-01-06 14:00:43	 Lester	lmk what you guys think forreal though 
+2017-01-06 14:01:25	 Oscar	I'll watch it later. I'll let you know
+2017-01-06 14:03:11	 Lester	I'm down to write a loca dev website in it with someone
+2017-01-06 14:04:22	 Lester	We can literally do it In one day
