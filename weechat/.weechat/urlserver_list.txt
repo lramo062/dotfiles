@@ -1,5 +1,0 @@
-{
-  0: ('25/12/16 15:00:08', 'root', 'irc.im.&bitlbee', 'http://wiki.bitlbee.org/.', '@root\tSome more help can be found on http://wiki.bitlbee.org/. Bugs can be reported at http://bugs.bitlbee.org/.'),
-  1: ('25/12/16 15:00:09', 'root', 'irc.im.&bitlbee', 'http://bugs.bitlbee.org/.', '@root\tSome more help can be found on http://wiki.bitlbee.org/. Bugs can be reported at http://bugs.bitlbee.org/.'),
-  2: ('29/12/16 16:46:45', '', 'lua.matrix', 'https://matrix.org/_matrix/client/r0/rooms/%21ORBhSpdCCuCXvPeCwl%3Amatrix%2Eorg/receipt/m.read/%241483047999118460ULrBs%3Amatrix%2Eorg?access_token=[redacted', '=!=\tCall to API errored in command url:https://matrix.org/_matrix/client/r0/rooms/%21ORBhSpdCCuCXvPeCwl%3Amatrix%2Eorg/receipt/m.read/%241483047999118460ULrBs%3Amatrix%2Eorg?access_token=[redacted], maybe timeout?'),
-}

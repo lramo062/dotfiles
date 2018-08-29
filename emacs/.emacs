@@ -1,18 +1,39 @@
-;;; Code
+;;; package --- Summary
+;;; Commentary:
+
+;;; Code:
+
+;; ansi term
+; edit text mode: C-c C-j
+; switch to terminal mode C-c C-k
+
+;; start an emacs server for faster launch
+(server-start)
 
 ;; Initialize Packages
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+;; Load packages
+(load-file "~/.emacs.d/.packages.el")
+
+;; Load Programming Lang
+(load-file "~/.emacs.d/.programming_lang.el")
+
+;; Load Org-Mode
+;;(setq org-agenda-files (list "~/FIU/TODO.org"))
+
+;; remove top menu bar in mac
+(setq ns-auto-hide-menu-bar t)
 
 ;; Open .emacs
 (defun init ()
   (interactive)
   (find-file "~/.emacs"))
 
-
 ;; Line-Numbers
 ;;(global-linum-mode 1)
+(line-number-mode 1)
 
 ;; No Tool-Bar (GUI)
 (tool-bar-mode -1)
@@ -22,12 +43,25 @@
 (scroll-bar-mode -1)
 
 ;; rainbow-delimiters
-(rainbow-delimiters-mode)
+;;(rainbow-delimiters-mode)
 
 ;; Color-Theme
+;; run M-x fringe-mode to remove fringes from themes
+;;(zerodark-setup-modeline-format)
 (if window-system
-    (load-theme 'dracula t)
-  (load-theme 'wombat t))
+    (load-theme 'monokai t)
+  (load-theme 'sanityinc-tomorrow-eighties t))
+
+;; neotree customizations
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-fixed-size nil)
+
+;; remove the highlighted fringe in most themes
+(defun remove-colored-fringe ()
+  (interactive)
+  (set-face-attribute 'fringe nil :background nil))
+;; call function on start-up
+(remove-colored-fringe)
 
 ;; Smooth scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -35,14 +69,13 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-
 ;; Highlight Matching Paren.
 (show-paren-mode 1)
 
-
 ;; Tabs
-(setq-default indent-tabs-mode nil)
-(setq tab-width 4)
+(setq-default indent-tabs-mode t)
+(setq-default tab-width 2)
+(setq-default typescript-indent-level 2)
 
 ;; No-Backups
 (setq make-backup-files nil)
@@ -50,23 +83,21 @@
 ;; Column-Number-Mode
 (setq column-number-mode t)
 
-
 ;; Font
-;;(set-default-font "Monaco")
-(set-face-attribute 'default nil :height 105)
-
+(set-face-attribute 'default nil :height 115)
+;;(set-default-font "Inconsolata")
+;;(set-default-font "Menlo")
+(set-default-font "Monaco")
 
 ;; No Splash-Screen
 (setq inhibit-splash-screen t
      initial-scratch-message nil
      initial-major-mode 'text-mode)
 
-
 ;; PATH ENV Variable
-(setenv "PATH" (concat (getenv "PATH") "/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
-(exec-path-from-shell-copy-env "PATH")
-
+;; (setenv "PATH" (concat (getenv "PATH") "/usr/local/bin"))
+;; (setq exec-path (append exec-path '("/usr/local/bin")))
+;; (exec-path-from-shell-copy-env "PATH")
 
 ;; remove back ups
 (setq make-backup-files nil)
@@ -80,14 +111,12 @@
   (interactive "nTransparency Value 0 - 100 opaque:")
      (set-frame-parameter (selected-frame) 'alpha value))
 ;; Set Transparency at Start-up
-(transparency 85)
-
+(transparency 90)
 
 ;; Previous-Terminal-Commmands
-(progn(require 'comint)
+(progn (require 'comint)
       (define-key comint-mode-map (kbd "<up>") 'comint-previous-input)
       (define-key comint-mode-map (kbd "<down>") 'comint-next-input))
-
 
 ;; Clear-Terminal
 (defun my-shell-hook ()
@@ -105,25 +134,140 @@
   (interactive)
   (print (file-name-extension buffer-file-name)))
 
+; JSON Prettier
+(defun json-prettier ()
+(interactive)
+(save-excursion
+  (shell-command-on-region
+   (mark) (point) "python -m json.tool"
+   (buffer-name) t)))
 
-;; Kill all helm buffers
+; Kill all helm buffers
 (defun kill-helm ()
   (interactive)
   (kill-matching-buffers "helm"))
 
 ;; Org-Mode
 (setq org-src-fontify-natively t)
+(setq org-log-done 'time)
+;; Toggle window split
+(defun toggle-window-split ()
+  (interactive)
+  (if (= (count-windows) 2)
+      (let* ((this-win-buffer (window-buffer))
+             (next-win-buffer (window-buffer (next-window)))
+             (this-win-edges (window-edges (selected-window)))
+             (next-win-edges (window-edges (next-window)))
+             (this-win-2nd (not (and (<= (car this-win-edges)
+                                         (car next-win-edges))
+                                     (<= (cadr this-win-edges)
+                                         (cadr next-win-edges)))))
+             (splitter
+              (if (= (car this-win-edges)
+                     (car (window-edges (next-window))))
+                  'split-window-horizontally
+                'split-window-vertically)))
+        (delete-other-windows)
+        (let ((first-win (selected-window)))
+          (funcall splitter)
+          (if this-win-2nd (other-window 1))
+          (set-window-buffer (selected-window) this-win-buffer)
+          (set-window-buffer (next-window) next-win-buffer)
+          (select-window first-win)
+          (if this-win-2nd (other-window 1))))))
 
-(require 'cider)
+(global-set-key (kbd "C-x |") 'toggle-window-split)
 
-;; Load packages
-(load-file "~/.emacs.d/.packages.el")
-
-;; Load Programming Lang
-(load-file "~/.emacs.d/.programming_lang.el")
-
-;; Load Org-Mode
-(load-file "~/.emacs.d/.org.el")
-
-(load-file "~/.emacs.d/nbaScores.el")
+;; Magit Status short-cut
+(global-set-key (kbd "C-x g") 'magit-status)
 ;;; END
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+	 [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+	 (vector "#ffffff" "#bf616a" "#B4EB89" "#ebcb8b" "#89AAEB" "#C189EB" "#89EBCA" "#232830"))
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
+ '(custom-safe-themes
+	 (quote
+		("a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
+ '(fci-rule-color "#343d46")
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+	 (--map
+		(solarized-color-blend it "#002b36" 0.25)
+		(quote
+		 ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+	 (quote
+		(("#073642" . 0)
+		 ("#546E00" . 20)
+		 ("#00736F" . 30)
+		 ("#00629D" . 50)
+		 ("#7B6000" . 60)
+		 ("#8B2C02" . 70)
+		 ("#93115C" . 85)
+		 ("#073642" . 100))))
+ '(hl-bg-colors
+	 (quote
+		("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+	 (quote
+		("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
+ '(magit-diff-use-overlays nil)
+ '(nrepl-message-colors
+	 (quote
+		("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
+ '(package-selected-packages
+	 (quote
+		(ranger auctex zerodark-theme zenburn-theme ycm yaml-mode xterm-color w3m undo-tree ujelly-theme twilight-bright-theme twilight-anti-bright-theme tide telephone-line sublime-themes subatomic256-theme subatomic-theme spacemacs-theme spacegray-theme sourcerer-theme soothe-theme solarized-theme sml-modeline smex smart-mode-line-powerline-theme slack rjsx-mode rebecca-theme rainbow-mode rainbow-delimiters purple-haze-theme projectile pg ox-gfm org-gcal omnisharp obsidian-theme nord-theme nimbus-theme neotree mustang-theme monokai-theme moe-theme meghanada material-theme markdown-mode magit-filenotify lush-theme leuven-theme lcr kaolin-themes json-mode js-comint java-snippets intero imenu-anywhere heroku-theme helm-spotify helm-dash hamburg-theme gruvbox-theme groovy-mode groovy-imports graphql-mode grandshell-theme gradle-mode goto-chg gotham-theme google-maps go-mode gandalf-theme fsharp-mode fringe-helper flymake-json flymake-jshint flymake-cursor flatui-theme flatui-dark-theme flatland-theme finalize exec-path-from-shell epc emojify-logos elpy dracula-theme doom-themes dockerfile-mode darktooth-theme darcula-theme dakrone-theme cyberpunk-theme cuda-mode creamsody-theme company-irony company-emacs-eclim color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-modern clojure-mode-extra-font-locking cider cherry-blossom-theme calfw-gcal calfw bubbleberry-theme boron-theme base16-theme badwolf-theme badger-theme atom-one-dark-theme atom-dark-theme ample-theme ahungry-theme afternoon-theme ac-helm abyss-theme)))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
+ '(vc-annotate-background nil)
+ '(vc-annotate-background-mode nil)
+ '(vc-annotate-color-map
+	 (quote
+		((20 . "#bf616a")
+		 (40 . "#DCA432")
+		 (60 . "#ebcb8b")
+		 (80 . "#B4EB89")
+		 (100 . "#89EBCA")
+		 (120 . "#89AAEB")
+		 (140 . "#C189EB")
+		 (160 . "#bf616a")
+		 (180 . "#DCA432")
+		 (200 . "#ebcb8b")
+		 (220 . "#B4EB89")
+		 (240 . "#89EBCA")
+		 (260 . "#89AAEB")
+		 (280 . "#C189EB")
+		 (300 . "#bf616a")
+		 (320 . "#DCA432")
+		 (340 . "#ebcb8b")
+		 (360 . "#B4EB89"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+	 (quote
+		(unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
+ '(xterm-color-names
+	 ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
+ '(xterm-color-names-bright
+	 ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"]))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

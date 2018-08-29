@@ -1,3 +1,14 @@
+;; ----------------------------------------------------------------------
+;; HASKELL
+;; (require 'haskell-mode)
+;; (require 'intero)
+;; (add-hook 'haskell-mode-hook 'intero-mode)
+;; (setq haskell-process-type 'stack-ghci)
+;; (require 'flycheck)
+;; (setq flycheck-check-syntax-automatically '(save new-line))
+;; (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+
+
 ;;;;
 ;; Clojure
 ;;;;
@@ -101,60 +112,74 @@
 ;;------------------------------------------------------------------------
 ;; Java Mode Eclim
 
-(require 'eclim)
-(add-hook 'java-mode-hook 'eclim-mode)
+;; (require 'eclim)
+;; (add-hook 'java-mode-hook 'eclim-mode)
 
-(custom-set-variables
- '(eclim-eclipse-dirs '("~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/"))
-   '(eclim-executable "~/.emacs.d/java-neon/Eclipse.app/Contents/Eclipse/eclim"))
-
-
-(require 'gradle-mode)
-(add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
-
-(define-key eclim-mode-map (kbd "C-c C-k") 'eclim-complete)
-(define-key eclim-mode-map (kbd "C-c C-c") 'eclim-problems-correct)
-
-(defun build-and-run ()
-  (interactive)
-  (gradle-run "build run"))
+;; (custom-set-variables
+;;  '(eclim-eclipse-dirs '("~/java-neon/eclipse/"))
+;;    '(eclim-executable "~/java-neon/eclipse/eclim"))
 
 
-(define-key gradle-mode-map (kbd "C-c C-r") 'build-and-run)
+;; (require 'gradle-mode)
+;; (add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
+
+;; (define-key eclim-mode-map (kbd "C-c C-k") 'eclim-complete)
+;; (define-key eclim-mode-map (kbd "C-c C-c") 'eclim-problems-correct)
+
+;; (defun build-and-run ()
+;;   (interactive)
+;;   (gradle-run "build run"))
+
+
+;; (define-key gradle-mode-map (kbd "C-c C-r") 'build-and-run)
+
+(require 'meghanada)
+(add-hook 'java-mode-hook
+          (lambda ()
+            ;; meghanada-mode on
+            (meghanada-mode t)
+            (setq c-basic-offset 2)
+            ;; use code format
+            (add-hook 'before-save-hook 'meghanada-code-beautify-before-save)))
+
 ;;---------------------------------------------------------
 ;; C Mode
 (setq c-default-style "linux"
-      c-basic-offset 4)
+      c-basic-offset 2)
 
 ;;---------------------------------------------------------
 ;; Omni-Sharp
-'(setq-default omnisharp--curl-executable-path "/usr/bin/curl")
-'(setq-default omnisharp-server-executable-path "/Users/LesterRamos/.emacs.d/omnisharp-server/OmniSharp/bin/Debug/")
+;; '(setq-default omnisharp--curl-executable-path "/usr/bin/curl")
+;; '(setq-default omnisharp-server-executable-path "/Users/LesterRamos/.emacs.d/omnisharp-server/OmniSharp/bin/Debug/")
 
-(add-hook 'csharp-mode-hook 'omnisharp-mode)
+;; (add-hook 'csharp-mode-hook 'omnisharp-mode)
 
-;; Omni-Sharp Auto Complete
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-omnisharp))
+;; ;; Omni-Sharp Auto Complete
+;; (eval-after-load 'company
+;;   '(add-to-list 'company-backends 'company-omnisharp))
 
-(defun omni-exec (s)
-  "Load Solution File"
-  (interactive "sPath to Solution File: ")
-  (shell-command (concat "mono /Users/LesterRamos/.emacs.d/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe -s " s)))
+;; (defun omni-exec (s)
+;;   "Load Solution File"
+;;   (interactive "sPath to Solution File: ")
+;;   (shell-command (concat "mono /Users/LesterRamos/.emacs.d/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe -s " s)))
 
 ;;---------------------------------------------------------
 
 ;; Compile LC3 Assmbly & Binary
-(defun lc3convert ()
-  (interactive)
-  (cond ((string-equal (file-name-extension buffer-file-name) "bin" )    
-	(shell-command (concat "lc3convert " buffer-file-name)))
+;; (defun lc3convert ()
+;;   (interactive)
+;;   (cond ((string-equal (file-name-extension buffer-file-name) "bin" )    
+;; 	(shell-command (concat "lc3convert " buffer-file-name)))
 
-	((string-equal (file-name-extension buffer-file-name) "asm" )
-	(shell-command (concat "lc3as " buffer-file-name)))))
+;; 	((string-equal (file-name-extension buffer-file-name) "asm" )
+;; 	(shell-command (concat "lc3as " buffer-file-name)))))
 
 ;;---------------------------------------------------------
 
 ;; Javascript Lint
 (require 'flymake-jshint)
 (add-hook 'js-mode-hook 'flymake-jshint-load)
+
+;;---------------------------------------------------------
+;; Python Mode
+;;(elpy-enable)
