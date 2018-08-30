@@ -44,7 +44,8 @@ bindsym $mod+t exec terminator
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b'
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b'
+bindsym $mod+d exec --no-startup-id  rofi -font 'monaco 10' -theme '/rofi/themes/}/sidebar.rasi' -show-icons -drun-icon-theme 'Papirus' -show drun 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
