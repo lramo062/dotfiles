@@ -44,7 +44,7 @@
 								typescript-mode ujelly-theme undo-tree w3m websocket xterm-color
 								yaml-mode yasnippet ycm zenburn-theme zerodark-theme flycheck seq
 								pkg-info epl magit magit-popup git-commit with-editor ghub
-								let-alist dash async all-the-icons memoize) "Default packages")
+								let-alist dash async all-the-icons memoize google-this) "Default packages")
 ;; Installs Packages
 (require 'cl)
 (defun install-lester-pkg ()
