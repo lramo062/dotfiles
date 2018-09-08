@@ -8,7 +8,7 @@
 # Deps
 
 # i3lock, i3blocks, i3-gaps, ttf-font-awesome, scrot, xlapperance
-# pulseaudio, pavucontrol
+# pulseaudio, pavucontrol, blueman, wifi-radar, feh
 
 # i3 config file (v4)
 #
@@ -38,7 +38,10 @@ floating_modifier $mod
 bindsym $mod+Return exec emacs
 
 # start a terminal
-bindsym $mod+t exec terminator
+bindsym $mod+t exec termite
+
+# start chrome
+bindsym $mod+c exec google-chrome-stable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -161,14 +164,21 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-bar {
-        status_command i3status
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# bar {
+# 		status_command polybar example
+# }
+
+
+# bar {
+#         status_command i3status
+# }
 
 # bar {
 #         status_command i3blocks -c ~/.config/i3/i3blocks/config
 #         position top
-#         font pango:Roboto Mono , FontAwesome 11
+#         font pango:Cousine Bold, Font Awesome 11
 #         separator_symbol " ❱ "
 #         strip_workspace_numbers yes
 #         colors {
@@ -184,17 +194,14 @@ bar {
 # }
 
 
-
-
 # Wallpaper
-exec --no-startup-id feh --bg-scale '/home/lester/Pictures/Wallpapers/138 - 8fpsD0W.png' 
+exec --no-startup-id feh --bg-scale '/home/lester/Pictures/mountains_peaks_snow.jpg'
 
 
 # Bitlbee for Facebook Weechat Messaging
 #exec --no-startup-id bitlbee -F -u lramo062
 
 # Window Apperance
-
 # misc rules
 for_window [class="^.*"] border pixel 4
 for_window [class="^Octave$"] floating enable
