@@ -4,6 +4,8 @@ sxhkd &
 
 killall polybar
 polybar future &
+pulseaudio &
+rmmod pcspkr & 
 wal -i /home/lester/Pictures/miami.jpg -n & 
 feh --bg-scale '/home/lester/Pictures/miami.jpg' & 
 compton --config /home/lester/.config/compton/compton.conf -b &
