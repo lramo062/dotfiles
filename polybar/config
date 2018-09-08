@@ -10,8 +10,8 @@
 ;                                                ;
 ;-------------------------------------------------
 [colors]
-background = #A61e2833
-foreground = #849cb7
+background = #5A000000
+foreground = #df9fa1
 blue  = #244E64
 white = #FFFFFF
  
@@ -23,8 +23,8 @@ white = #FFFFFF
 [bar/future]
 width = 100%
 height = 24
-offset-x = 15%
-offset-y = 1%
+;offset-x = 15%
+;offset-y = 1%
 radius = 0.0
 fixed-center = true
  
@@ -32,10 +32,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
  
 border-size = 2
-border-color = ${colors.foreground}
+border-color = ${colors.background}
  
-modules-left = i3 title
-; modules-center = 
+modules-left = bspwm
+modules-center = title
 modules-right = network date pavolume battery
 font-0 = "monaco:size=9:weight=bold;2"
 font-1 = "FontAwesome:size=12;"
@@ -70,7 +70,37 @@ index-sort = true
 ; Default: true
 enable-click = false
 
+;-------------------------------------------------
+;                                                ;
+;                   BSPWM PARAMETERS             ;
+;                                                ;
+;-------------------------------------------------
+[module/bspwm]
+type = internal/bspwm
 
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; Default: true
+; pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = false
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; hide empty workspaces
+label-empty = 
 
 ;-------------------------------------------------
 ;                                                ;
@@ -79,7 +109,10 @@ enable-click = false
 ;-------------------------------------------------
 [module/battery]
 type = internal/battery
-label-padding = 0
+; label-padding = 1
+format-charging-padding = 1
+format-discharging-padding = 1
+format-full-padding = 1
 
 ; This is useful in case the battery never reports 100% charge
 full-at = 99
@@ -135,7 +168,7 @@ label-charging = %percentage%%
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%  %
+label-discharging = %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
