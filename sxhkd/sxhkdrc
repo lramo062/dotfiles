@@ -8,7 +8,11 @@ super + @space
 
 # emacs
 super + Return
-	emacs
+	emacsclient
+
+# dired file viewer
+super + n
+	emacsclient --execute='(dired "~/")'
 
 # chrome
 super + c

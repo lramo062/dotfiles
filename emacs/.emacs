@@ -8,7 +8,7 @@
 ; switch to terminal mode C-c C-k
 
 ;; start an emacs server for faster launch
-(server-start)
+;(server-start)
 
 ;; Initialize Packages
 (setq package-enable-at-startup nil)
