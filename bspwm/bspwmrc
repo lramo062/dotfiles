@@ -2,7 +2,7 @@
 
 
 # nmcli for wifi
-# blueman-manager for bluetooth devices
+# blueman-manager for bluetooth devices, policykit for auth <- important
 # pulseaudio + pavucontrol fron-end for sound
 
 
