@@ -1,26 +1,21 @@
-;;; package --- Summary
-;;; Commentary:
-
-;;; Code:
-
 ;; remove top menu bar in mac
 (setq ns-auto-hide-menu-bar t)
 
-;; Removes *messages* from the buffer.
+;; removes *messages* from the buffer.
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
 
-;; Removes *Completions* from buffer after you've opened a file.
+;; removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
       '(lambda ()
          (let ((buffer "*Completions*"))
            (and (get-buffer buffer)
                 (kill-buffer buffer)))))
 
-;; Don't show *Buffer list* when opening multiple files at the same time.
+;; don't show *Buffer list* when opening multiple files at the same time.
 (setq inhibit-startup-buffer-menu t)
 
-;; Show only one active window when opening multiple files at the same time.
+;; show only one active window when opening multiple files at the same time.
 (add-hook 'window-setup-hook 'delete-other-windows)
 
 ;; show no recent buffers garbage text
@@ -32,42 +27,42 @@
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
-;; Line-Numbers
+;; line-numbers
 ;;(global-linum-mode 1)
 (line-number-mode 1)
 
-;; No Tool-Bar (GUI)
+;; no tool-bar (GUI)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-;; No scroll bar
+;; no scroll bar
 (scroll-bar-mode -1)
 
-;; Smooth scrolling
+;; smooth scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-;; Highlight Matching Paren.
+;; highlight matching paren.
 (show-paren-mode 1)
 
-;; Tabs
+;; tabs
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 2)
 (setq-default typescript-indent-level 2)
 
-;; No-Backups
+;; no-backups
 (setq make-backup-files nil)
 
-;; Column-Number-Mode
+;; column-number-mode
 (setq column-number-mode t)
 
-;; Font
+;; font
 (set-face-attribute 'default nil :height 115)
 (set-default-font "Monaco")
 
-;; No Splash-Screen
+;; no splash-screen
 (setq inhibit-splash-screen t
      initial-scratch-message nil
      initial-major-mode 'text-mode)
@@ -78,7 +73,7 @@
 ;; yes & no = y & n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Previous-Terminal-Commmands
+;; previous-terminal-commmands
 (progn (require 'comint)
       (define-key comint-mode-map (kbd "<up>") 'comint-previous-input)
       (define-key comint-mode-map (kbd "<down>") 'comint-next-input))
@@ -102,5 +97,7 @@
 ;; empty line charcters at the end of file
 (vim-empty-lines-mode t)
 
+;; magit Status short-cut
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (provide '.settings)
-;;; .settings.el ends here

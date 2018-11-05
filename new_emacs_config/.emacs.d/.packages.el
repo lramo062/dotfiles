@@ -1,9 +1,3 @@
-;;; package --- Summary
-;;; Commentary:
-
-;;; Code:
-
-;; Melpa
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
@@ -11,8 +5,7 @@
    '("melpa" . "http://melpa.org/packages/") t)
   )
 
-;; Package-Summary
-
+;; package-summary
 (defvar lester-packages
   '(abyss-theme ac-helm afternoon-theme ahungry-theme ample-theme atom-dark-theme
 								atom-one-dark-theme badger-theme badwolf-theme base16-theme
@@ -50,7 +43,8 @@
 								yaml-mode yasnippet ycm zenburn-theme zerodark-theme flycheck seq
 								pkg-info epl magit magit-popup git-commit with-editor ghub
 								let-alist dash async all-the-icons memoize google-this) "Default packages")
-;; Installs Packages
+
+;; installs packages
 (require 'cl)
 (defun install-lester-pkg ()
   (package-initialize)
@@ -60,7 +54,7 @@
 	finally (return
 		 t)))
 
-;; Checks if Packages are installed
+;; checks if packages are installed
 (unless (install-lester-pkg) 
   (message "%s" "Refreshing package database...") 
   (package-refresh-contents)
@@ -68,42 +62,30 @@
     (when (not (package-installed-p pkg))
           (package-install pkg))))
 
-;; Require's
+;; initialize packages
+(setq package-enable-at-startup nil)
+(package-initialize)
 
-(eval-after-load "org"
-  '(require 'ox-gfm nil t))
+;; all-the-icons
+(require 'all-the-icons)
 
-;; ECLIM
-(require 'eclim)
-(global-eclim-mode)
-
-(require 'eclimd)
-
-;; Fly-Check
+;; fly-check
 (global-flycheck-mode)
 
-;; Auto-Complete
+;; auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; Auto-Complete Helm
-;; (require 'ac-helm)  ;; Not necessary if using ELPA package
-;; (global-set-key (kbd "C-:") 'ac-complete-with-helm)
-;; (define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
-
-;; Company Mode
+;; company mode
 (add-hook 'after-init-hook 'global-company-mode)
-(require 'company-emacs-eclim)
-(company-emacs-eclim-setup)
 (global-company-mode t)
 
-;;; Yasnippets
-(add-to-list 'load-path
-	     "~/.emacs.d/plugins/yasnippet")
+;;; yasnippets
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; Helm
+;; helm
 (require 'helm)
 (helm-mode 1)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -120,4 +102,3 @@
 (setq company-dabbrev-downcase nil)
 
 (provide '.packages)
-;;; .packages.el ends here 
