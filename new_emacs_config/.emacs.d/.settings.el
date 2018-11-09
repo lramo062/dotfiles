@@ -100,4 +100,19 @@
 ;; magit Status short-cut
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; pop-up shell
+(defun gk-pop-shell (arg)
+  "Pop a shell in a side window.
+Pass arg to ‘shell’."
+  (interactive "P")
+  (select-window
+   (display-buffer-in-side-window
+    (save-window-excursion
+      (let ((prefix-arg arg))
+        (call-interactively #'ansi-term))
+      (current-buffer))
+    '((side . bottom)))))
+
+(global-set-key (kbd "C-x ]") 'gk-pop-shell)
+
 (provide '.settings)
