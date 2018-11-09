@@ -15,7 +15,7 @@
 								color-theme-sanityinc-tomorrow color-theme-solarized color-theme
 								company-emacs-eclim company-irony creamsody-theme cuda-mode
 								cyberpunk-theme diminish dakrone-theme darcula-theme darktooth-theme
-								dockerfile-mode doom-themes dracula-theme eclim elpy emojify-logos
+								dockerfile-mode doom-themes doom-modeline dracula-theme eclim elpy emojify-logos
 								epc ctable concurrent exec-path-from-shell
 								finalize find-file-in-project flatland-theme flatui-dark-theme
 								flatui-theme flymake-cursor flymake-jshint flymake-json
@@ -68,6 +68,10 @@
 
 ;; all-the-icons
 (require 'all-the-icons)
+
+;; doom modeline
+(require 'doom-modeline)
+(doom-modeline-init)
 
 ;; fly-check
 (global-flycheck-mode)
