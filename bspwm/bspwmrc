@@ -1,34 +1,39 @@
-#! /bin/sh
+#!/bin/sh
 
+# command line tools for wifi, audio, and bluetooth
+# wifi-scanning:  nmcli dev wifi
+# wifi-connection: nmcli dev wifi connect SSID password PASSWORD
+# bluetooth: blueman-applet && blueman-manager
+# audio: pulseaudio --start && pavucontrol
 
-# nmcli for wifi
-# blueman-manager for bluetooth devices, policykit for auth <- important
-# pulseaudio + pavucontrol fron-end for sound
-
+# auto-starting bluetooth:  systemctl enable bluetooth
+# auto-starting pulseaudio: systemctl --user enable pulseaudio
 
 sxhkd &
-
-killall polybar
+killall polybar 
 polybar future &
-pulseaudio &
-rmmod pcspkr & 
-wal -i /home/lester/Pictures/miami.jpg -n & 
-feh --bg-scale '/home/lester/Pictures/miami.jpg' & 
+xrandr --output DP-4 --primary & 
+wal -i wal -i /home/lester/Pictures/Wallpapers/13\ -\ KxytYdd.png -n 
+feh --bg-scale '/home/lester/Pictures/Wallpapers/13 - KxytYdd.png' 
 compton --config /home/lester/.config/compton/compton.conf -b &
+emacs --daemon &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9 10
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width         3
+bspc config window_gap           8
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config active_border_color "#2a84d2"
+bspc config normal_border_color "#000000"
+bspc config focused_border_color "#2a84d2"
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-bspc rule -a Emacs state=tiled
-bspc rule -a "*" state=floating
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Chromium desktop='^2'
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Screenkey manage=off
+# bspc rule -a Emacs state=tiled
+# bspc rule -a "*" state=floating
