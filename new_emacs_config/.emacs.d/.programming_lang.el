@@ -210,3 +210,9 @@
 ;; this sets up a repl for what ever lisp language we need
 ;; use run-lisp to start a repl
 (setq inferior-lisp-program "~/nba-stats-hy/hy/bin/hy")
+
+
+;;---------------------------------------------------------
+;; Common Lisp
+(setq inferior-lisp-program "sbcl")
+

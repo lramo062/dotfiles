@@ -7,10 +7,10 @@
 
 ;; removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
-      '(lambda ()
-         (let ((buffer "*Completions*"))
-           (and (get-buffer buffer)
-                (kill-buffer buffer)))))
+					'(lambda ()
+						 (let ((buffer "*Completions*"))
+							 (and (get-buffer buffer)
+										(kill-buffer buffer)))))
 
 ;; don't show *Buffer list* when opening multiple files at the same time.
 (setq inhibit-startup-buffer-menu t)
@@ -19,7 +19,7 @@
 (add-hook 'window-setup-hook 'delete-other-windows)
 
 ;; show no recent buffers garbage text
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; column line wrap settings
 (require 'whitespace)
@@ -48,9 +48,10 @@
 (show-paren-mode 1)
 
 ;; tabs
-(setq-default indent-tabs-mode t)
+;; (setq-default indent-tabs-mode t)
+;; (setq-default typescript-indent-level 2)
 (setq-default tab-width 2)
-(setq-default typescript-indent-level 2)
+(global-set-key (kbd "TAB") 'tab-to-tab-stop)
 
 ;; no-backups
 (setq make-backup-files nil)
@@ -64,8 +65,8 @@
 
 ;; no splash-screen
 (setq inhibit-splash-screen t
-     initial-scratch-message nil
-     initial-major-mode 'text-mode)
+			initial-scratch-message nil
+			initial-major-mode 'text-mode)
 
 ;; remove back ups
 (setq make-backup-files nil)
@@ -75,8 +76,8 @@
 
 ;; previous-terminal-commmands
 (progn (require 'comint)
-      (define-key comint-mode-map (kbd "<up>") 'comint-previous-input)
-      (define-key comint-mode-map (kbd "<down>") 'comint-next-input))
+       (define-key comint-mode-map (kbd "<up>") 'comint-previous-input)
+       (define-key comint-mode-map (kbd "<down>") 'comint-next-input))
 
 (require 'diminish)
 (diminish 'whitespace-mode)
@@ -89,9 +90,9 @@
 (diminish 'eldoc-mode)
 
 ;; highlight current line
-(defface hl-line '((t (:background "Gray")))
-  "Face to use for `hl-line-face'." :group 'hl-line)
-(setq hl-line-face 'hl-line)
+;; (defface hl-line '((t (:background "Gray")))
+;;   "Face to use for `hl-line-face'." :group 'hl-line)
+;; (setq hl-line-face 'hl-line)
 (global-hl-line-mode t)
 
 ;; empty line charcters at the end of file
@@ -114,5 +115,18 @@ Pass arg to ‘shell’."
     '((side . bottom)))))
 
 (global-set-key (kbd "C-x ]") 'gk-pop-shell)
+
+;; moving through words remap
+(global-set-key (kbd "C-.") 'forward-word)
+(global-set-key (kbd "C-,") 'backward-word)
+
+;; set fill column
+(set-fill-column 80)
+
+;; dashboard
+;; (require 'dashboard)
+;; (dashboard-setup-startup-hook)
+;; ;; emacs client
+;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 (provide '.settings)

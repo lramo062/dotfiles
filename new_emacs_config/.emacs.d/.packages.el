@@ -8,41 +8,41 @@
 ;; package-summary
 (defvar lester-packages
   '(abyss-theme ac-helm afternoon-theme ahungry-theme ample-theme atom-dark-theme
-								atom-one-dark-theme badger-theme badwolf-theme base16-theme
-								boron-theme bubbleberry-theme calfw calfw-gcal
-								cherry-blossom-theme cider clojure-mode-extra-font-locking
-								clojure-mode color-theme-modern color-theme-sanityinc-solarized
-								color-theme-sanityinc-tomorrow color-theme-solarized color-theme
-								company-emacs-eclim company-irony creamsody-theme cuda-mode
-								cyberpunk-theme diminish dakrone-theme darcula-theme darktooth-theme
-								dockerfile-mode doom-themes doom-modeline dracula-theme eclim elpy emojify-logos
-								epc ctable concurrent exec-path-from-shell
-								finalize find-file-in-project flatland-theme flatui-dark-theme
-								flatui-theme flymake-cursor flymake-jshint flymake-json
-								flymake-easy fringe-helper fsharp-mode company-quickhelp
-								gandalf-theme go-mode google-maps gotham-theme goto-chg
-								gradle-mode grandshell-theme graphql-mode groovy-imports
-								groovy-mode gruvbox-theme hamburg-theme helm-dash helm-spotify
-								helm helm-core heroku-theme hy-mode highlight-indentation
-								imenu-anywhere intero haskell-mode irony ivy java-snippets
-								js-comint json-mode json-reformat json-snatcher kaolin-themes
-								autothemer lcr leuven-theme lush-theme magit-filenotify
-								markdown-mode material-theme meghanada company moe-theme
-								monokai-theme multi mustang-theme neotree nimbus-theme
-								nord-theme obsidian-theme omnisharp f csharp-mode auto-complete
-								org-gcal org ox-gfm pcache pg popup pos-tip projectile
-								purple-haze-theme pyvenv queue rainbow-delimiters rainbow-mode
-								rebecca-theme request-deferred deferred rjsx-mode js2-mode
-								shut-up slack emojify ht alert log4e gntp circe oauth2 request
-								smart-mode-line-powerline-theme smart-mode-line rich-minority
-								powerline smex sml-modeline solarized-theme soothe-theme
-								sourcerer-theme spacegray-theme spacemacs-theme spinner
-								subatomic-theme subatomic256-theme sublime-themes telephone-line
-								tide s twilight-anti-bright-theme twilight-bright-theme
-								typescript-mode ujelly-theme undo-tree vim-empty-lines-mode w3m websocket xterm-color
-								yaml-mode yasnippet ycm zenburn-theme zerodark-theme flycheck seq
-								pkg-info epl magit magit-popup git-commit with-editor ghub
-								let-alist dash async all-the-icons memoize google-this) "Default packages")
+    atom-one-dark-theme badger-theme badwolf-theme base16-theme
+    boron-theme bubbleberry-theme calfw calfw-gcal
+    cherry-blossom-theme cider clojure-mode-extra-font-locking
+    clojure-mode color-theme-modern color-theme-sanityinc-solarized
+    color-theme-sanityinc-tomorrow color-theme-solarized color-theme
+    company-emacs-eclim company-irony creamsody-theme cuda-mode
+    cyberpunk-theme diminish dashboard dakrone-theme darcula-theme darktooth-theme
+    dockerfile-mode doom-themes doom-modeline dracula-theme eclim elpy emojify-logos
+    epc ctable concurrent exec-path-from-shell
+    finalize find-file-in-project flatland-theme flatui-dark-theme
+    flatui-theme flymake-cursor flymake-jshint flymake-json
+    flymake-easy fringe-helper fsharp-mode company-quickhelp
+    gandalf-theme go-mode google-maps gotham-theme goto-chg
+    gradle-mode grandshell-theme graphql-mode groovy-imports
+    groovy-mode gruvbox-theme hamburg-theme helm-dash helm-spotify
+    helm helm-core heroku-theme hy-mode highlight-indentation
+    imenu-anywhere intero haskell-mode irony ivy java-snippets
+    js-comint json-mode json-reformat json-snatcher kaolin-themes
+    autothemer lcr leuven-theme lush-theme magit-filenotify
+    markdown-mode material-theme meghanada company moe-theme
+    monokai-theme multi mustang-theme neotree nimbus-theme
+    nord-theme obsidian-theme omnisharp f csharp-mode auto-complete
+    org-gcal org ox-gfm pcache pg popup pos-tip projectile
+    purple-haze-theme pyvenv queue rainbow-delimiters rainbow-mode
+    rebecca-theme request-deferred deferred rjsx-mode js2-mode
+    shut-up slack emojify ht alert log4e gntp circe oauth2 request
+    smart-mode-line-powerline-theme smart-mode-line rich-minority
+    powerline smex sml-modeline solarized-theme soothe-theme
+    sourcerer-theme spacegray-theme spacemacs-theme spinner
+    subatomic-theme subatomic256-theme sublime-themes telephone-line
+    tide s twilight-anti-bright-theme twilight-bright-theme
+    typescript-mode ujelly-theme undo-tree vim-empty-lines-mode w3m websocket xterm-color
+    yaml-mode yasnippet ycm zenburn-theme zerodark-theme flycheck seq
+    pkg-info epl magit magit-popup git-commit with-editor ghub
+    let-alist dash async all-the-icons memoize google-this) "Default packages")
 
 ;; installs packages
 (require 'cl)
@@ -71,7 +71,7 @@
 
 ;; doom modeline
 (require 'doom-modeline)
-(doom-modeline-init)
+;;(doom-modeline-init)
 
 ;; fly-check
 (global-flycheck-mode)
