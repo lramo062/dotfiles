@@ -32,3 +32,7 @@ cp -r dotfiles/compton .config/
 # zsh setup
 sudo chsh -s /usr/bin/zsh lester
 cp /usr/share/oh-my-zsh/zshrc ~/.zshrc
+
+# git
+git config --global user.email "lramo062@fiu.edu"
+git config --global user.name "Lester Ramos"
