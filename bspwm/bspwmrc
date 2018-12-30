@@ -13,7 +13,7 @@ sxhkd &
 killall polybar 
 polybar future &
 xrandr --output DP-4 --primary & 
-wal -i wal -i /home/lester/Pictures/wallpaper.png -n 
+# wal -i /home/lester/Pictures/wallpaper.png -n 
 feh --bg-scale '/home/lester/Pictures/wallpaper.png' 
 compton --config /home/lester/.config/compton/compton.conf -b &
 emacs --daemon &
