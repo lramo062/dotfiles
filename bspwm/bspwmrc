@@ -14,21 +14,21 @@ killall polybar
 polybar future &
 xrandr --output DP-4 --primary & 
 # wal -i /home/lester/Pictures/wallpaper.png -n 
-feh --bg-scale '/home/lester/Pictures/wallpaper.png' 
+feh --bg-scale '/home/lester/Pictures/wallpaper.jpg' 
 compton --config /home/lester/.config/compton/compton.conf -b &
 emacs --daemon &
 
 bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         3
-bspc config window_gap           8
+bspc config window_gap           5
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config active_border_color "#2a84d2"
 bspc config normal_border_color "#000000"
-bspc config focused_border_color "#2a84d2"
+bspc config focused_border_color "#FFFFFF"
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
