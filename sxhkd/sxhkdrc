@@ -20,7 +20,7 @@ super + c
 
 # program launcher
 super + d
-	rofi -font 'monaco 10' -theme '/home/lester/.cache/wal/colors-rofi-dark.rasi' -show run
+	rofi -font 'monaco 10' -theme '/home/lester/dotfiles/rofi/themes/}/flat-orange.rasi' -show run
 
 # make sxhkd reload its configuration files:
 super + shift + r
@@ -135,3 +135,7 @@ super + {Left,Down,Up,Right}
 # toggle between windows
 super + Tab
        bspc node focused -f next
+
+# logout && suspend
+super + L
+			/home/lester/dotfiles/i3/./lockScript.sh

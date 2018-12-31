@@ -11,7 +11,7 @@
 ;-------------------------------------------------
 [colors]
 background = #5A000000
-foreground = #df9fa1
+foreground = #FFFFFF
 blue  = #244E64
 white = #FFFFFF
  
@@ -22,7 +22,7 @@ white = #FFFFFF
 ;-------------------------------------------------
 [bar/future]
 width = 100%
-height = 24
+height = 20
 ;offset-x = 15%
 ;offset-y = 1%
 radius = 0.0
@@ -37,7 +37,7 @@ border-color = ${colors.background}
 modules-left = bspwm
 modules-center = title
 modules-right = network date pavolume battery
-font-0 = "monaco:size=9:weight=bold;2"
+font-0 = "noto-sans:size=9:weight=regular;2"
 font-1 = "FontAwesome:size=12;"
 
 ;-------------------------------------------------
@@ -228,10 +228,10 @@ time-alt = %r
  
 format = <label>
 format-foreground = ${colors.white}
- 
+
 label = %date% %time%
 label-foreground = ${colors.white}
- 
+
 ;-------------------------------------------------
 ;                                                ;
 ;               POWER MENU PARAMETERS            ;
