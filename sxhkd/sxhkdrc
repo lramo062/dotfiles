@@ -134,8 +134,8 @@ super + {Left,Down,Up,Right}
 
 # toggle between windows
 super + Tab
-       bspc node focused -f next
+	bspc node focused -f next
 
 # logout && suspend
-super + L
-			/home/lester/dotfiles/i3/./lockScript.sh
+super + p
+	/home/lester/dotfiles/i3/lockScript.sh
