@@ -1,0 +1,7 @@
+ROM VER: 1.3
+
+dumped using Randy Gluvna's RomDump software with a
+TI-GraphLink.
+
+illegal usage of this rom is regarded with the highest
+form of contempt by me.

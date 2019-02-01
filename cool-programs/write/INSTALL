@@ -1,0 +1,6 @@
+Requires Qt 5.7 (available in Ubuntu Zesty and Debian unstable).
+
+Install Qt libraries and run ./Write
+
+    apt-get install libqt5widgets5 libqt5network5 libqt5svg5
+
